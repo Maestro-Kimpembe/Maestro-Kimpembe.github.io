@@ -22,6 +22,26 @@
   font-size: 15px;
   indent: 10px;
  }
+ .marquee {
+   width: 5%;
+   height: 5%;
+   background-color: white;
+   text-transform: uppercase;
+   white-space: nowrap;
+   }
+   .marquee div{
+    font-size: 30px;
+    animation: animate 7s linear infinite;
+    display: inline-block;
+   }
+   @keyframes animate{
+    100%{
+        transform: translate(-100%, 0) ;
+    }
+   }
+   .gimfy-embed {
+    position: absolute;
+    top: 5px;
 </style>
 <center><i><h1>Wszystkie moje dotychczasowe prace w jednej tabeli</h1></center>
  <p><b><i>Zło Łamane:cytaty</p></b></i>
@@ -47,5 +67,8 @@
     <th>1.10.2022</th>
 </tr>
 </table>
+ <div class="marquee">
+        <div>Jest 10/10 ale nie lubi sora Kuby? 0/10!</div>
+    </div>
 </body>
 </html>
