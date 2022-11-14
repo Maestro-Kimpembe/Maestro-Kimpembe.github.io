@@ -1,5 +1,107 @@
 <html>
     <head>
-        <title>Część druga książki</title>
+        <title>Część druga książki</title> 
     </head>
+    <style>
+        body {
+        background-image: url('xd.png');
+            background-repeat: no-repeat;
+            background-size: 100%,100%;
+        }
+        .split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.left {
+  left: 0;
+  border-right-color: black;
+  border-bottom-right-radius: 10px;
+}
+.right {
+  right: 0;
+  
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+button {
+      color: black;
+      background-color: blueviolet;
+      border-bottom: groove;
+      border-top: groove;
+      border-radius: 3px;
+      border-color: black;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: medium;
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      bottom: 25;
+      font-style: initial;
+      text-decoration: underline darkblue 15px;
+      text-decoration: wavy;
+      font-size: 30px;
+}
+    h1 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: lawngreen;
+        text-indent: 16px;
+        font-size: 20px;
+    }
+     .lista {
+        font-size: 30px;
+        color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     }
+     h2 {
+        font-size: 25px;
+        color: firebrick;
+        text-decoration: underline black;
+        text-overflow: initial;
+     }
+     h3 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: black;
+        text-decoration: dashed red;
+        font-size: 30px;
+     }
+     p {
+        font-size: 23px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: black;
+        text-indent: 19px;
+        text-decoration: solid;
+        right: 33%;
+     }
+    </style>
+    <body>
+        <div class="split left">
+        <i><center><h1>Spis treści "Książki" :</h1></center></i>
+        <div class="lista">
+        <ol>
+            <li>Informacje na temat wielkiego patrioty Vernona Roche'a</li>
+            <li>Cechy charakterystyczne temerskiego wojownika oraz jego historia</li>
+            <li>Dlaczego wszyscy cenią Vernona Roche'a ?</li>
+            <li>Zakończenie "Książki"</li>
+        </ol>
+    </div>
+    <center><h2>To całość tej pracy. Pierwsza część została przedstawiona po prawej stronie(chyba)</h2></center>
+        </div>
+        <div class="split right">
+            <center><b><h3>Informacje na temat temerskiego oficera Vernona Roche'a:</h3></center></b>
+            <p>Pierwszą rzeczą, którą warto wspomnieć przy przybliżeniu wymienianej w całej pracy postaci jest to, że Vernon jest odpowiedzialny za pacyfikację Podgórza Mahakamskiego :)</p>
+            <p>Dobrze też powiedzieć o 2-krotnym odznajczeniu w boju owej postaci za męstwo w boju. Należy też napomnieć o opcjonalnym (w zależności od fabuły) uczestnictwie w bitwie pod Kaer Morhen</p>
+            <p>Resztę można zawrzeć w dalszej części.</p>
+        </div>
+    </body>
 </html>
