@@ -21,10 +21,12 @@
   left: 0;
   border-right-color: black;
   border-bottom-right-radius: 10px;
+  margin-left: 20px;
+ 
 }
 .right {
   right: 0;
-  
+  margin-left: 20px;
 }
 .centered {
   position: absolute;
@@ -54,9 +56,9 @@ button {
 }
     h1 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        color: lawngreen;
+        color: royalblue;
         text-indent: 16px;
-        font-size: 20px;
+        font-size: 30px;
     }
      .lista {
         font-size: 30px;
@@ -76,12 +78,18 @@ button {
         font-size: 30px;
      }
      p {
-        font-size: 23px;
+        font-size: 20px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         color: black;
         text-indent: 19px;
         text-decoration: solid;
-        right: 33%;
+     }
+     .temeria {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: end;
      }
     </style>
     <body>
@@ -89,19 +97,31 @@ button {
         <i><center><h1>Spis treści "Książki" :</h1></center></i>
         <div class="lista">
         <ol>
-            <li>Informacje na temat wielkiego patrioty Vernona Roche'a</li>
+            <li>Informacje na temat wielkiego patrioty Vernona Roche'a</li> 
             <li>Cechy charakterystyczne temerskiego wojownika oraz jego historia</li>
             <li>Dlaczego wszyscy cenią Vernona Roche'a ?</li>
             <li>Zakończenie "Książki"</li>
         </ol>
+        <p>Na umilenie wideło poniżej</p>
+        <div class="temeria">
+            <video controls autoplay loop  width="350" height="210">
+                <source src="funky.mp4">
+            </video>
+        </div>
     </div>
     <center><h2>To całość tej pracy. Pierwsza część została przedstawiona po prawej stronie(chyba)</h2></center>
         </div>
         <div class="split right">
             <center><b><h3>Informacje na temat temerskiego oficera Vernona Roche'a:</h3></center></b>
-            <p>Pierwszą rzeczą, którą warto wspomnieć przy przybliżeniu wymienianej w całej pracy postaci jest to, że Vernon jest odpowiedzialny za pacyfikację Podgórza Mahakamskiego :)</p>
-            <p>Dobrze też powiedzieć o 2-krotnym odznajczeniu w boju owej postaci za męstwo w boju. Należy też napomnieć o opcjonalnym (w zależności od fabuły) uczestnictwie w bitwie pod Kaer Morhen</p>
+            <p>Pierwszą rzeczą, którą warto wspomnieć przy przybliżeniu wymienianej w całej pracy postaci jest to</p>
+            <p>że ona jest odpowiedzialny za pacyfikację Podgórza Mahakamskiego</p>
+            <p>Dobrze też powiedzieć o 2-krotnym odznajczeniu w boju owej postaci za męstwo w boju.</p>
+            <p>Należy też napomnieć o opcjonalnym (w zależności od fabuły) uczestnictwie w bitwie pod Kaer Morhen.</p>
             <p>Resztę można zawrzeć w dalszej części.</p>
+            <p>Taki fajny cytat-----></p>
+            <div class="temeria">
+                <img width="269" height="200" src="cytat.jpg">
+            </div>
         </div>
     </body>
 </html>
