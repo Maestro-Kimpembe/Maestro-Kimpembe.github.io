@@ -1,0 +1,131 @@
+<html>
+    <html>
+    <head>
+        <title>Część czwarta książki</title> 
+    </head>
+    <style>
+        body {
+        background-image: url('xd.png');
+            background-repeat: no-repeat;
+            background-size: 100%,100%;
+        }
+        .split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  padding-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  margin-right: 20px;
+}
+.left {
+  left: 0;
+  border-right-color: black;
+  border-bottom-right-radius: 10px;
+}
+.right {
+  right: 0;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+button {
+      color: black;
+      border-bottom: groove;
+      border-top: groove;
+      border-radius: 3px;
+      border-color: black;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: medium;
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      font-style: initial;
+      text-decoration: underline yellow 15px;
+      text-decoration: wavy;
+      font-size: 30px;
+}
+p {
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: chocolate;
+        text-indent: 19px;
+        text-decoration: solid;
+        text-decoration: underline purple;
+        text-align: center;
+     }
+     h1 {
+        text-align: center;
+        color: green;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        font-weight: 1200;
+     }
+     h2 {
+        text-align: center;
+        color: royalblue;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+     }
+     video {
+        position: absolute;
+        top: 78%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: end;
+     }
+     .video1 {
+     position: absolute;
+        top: 78%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        text-align: end;
+     }
+     .button2 {
+        right: 15;
+        bottom: 100;
+        background-color: lawngreen;
+        text-decoration: underline red;
+        width: 327;
+    }
+</style>
+<body>
+    <div class="split left">
+       <center> <h1>Cechy charakterystyczne temerskiego wojownika oraz jego historia:</h1></center>
+       <b> <p>Vernon Roche urodził na terenie Królewstwa Temerii jako biedne dziecko.</p>
+        <p>Nie był szanowany przez nikogo ze względu na jego pochodzenie.</p>
+        <p>Ten stan zmienił jednak król Foltest i wychował go na żołnierza.</p>
+        <p>Od tamtego momentu Roche jest oddany Temerii</p>
+        <p>Cechą charakterystyczną jego jest patriotyzm, zrobi wszystko dla Temerii</p>
+        <p>Jest on przykładem prawdziwego patrioty,który zrobi wszystko dla kraju</p> 
+        <p>Talar- as wywiadu</p> </b>
+        <video class="video" controls autoplay loop  width="300" height="210" >
+            <source src="talar.mp4">
+        </video>
+    </div>
+    <div class="split right">
+        <h2>Cechy charakterystyczne temerskiego wojownika<br>i jego historia(ciąg dalszy):</h2>
+      <b><p>Roche jest nie tylko wielkim patriotą ale także dobrze wyszkolonym wojownikiem.</p>
+        <p>Wygrał wiele pojedynków i bitew dzięki swoim umiejętnością.</p>
+        <p>Mimo tego jednak Królewstwo Temerii upadło po śmierci jego ostatniego króla-Foltesta.</p>
+        <p>Po upadku kraju Vernon był skazany na walkę w partyzanckim stylu na półnicny wschód od Novigradu</p>
+        <p>Ostatecznie Temeria może się odrodzić ale jako marionetkowe państwo Cesarstwa Nilfgaardu.</p>
+        <p>Nie tylko on dbał o interesy temerskie ale też Bernard "Talar" Dukat- szef wywiadu.</p>
+        <video class="video1" controls autoplay loop  width="300" height="210" >
+            <source src="zrobie.mp4">
+        </video>
+        <a href="środkowa strona ksiazki.html" target="_blank">
+            <button class="button button2">Przerzuć stronę w tył!!</button>
+                <a href="5strona ksiazki.html" target="_blank"> 
+                    <button style="background-color: red; right: 15; bottom: 60; text-decoration: underline green;">Przerzuć stronę w przód!!</button>
+    </div>
+</body>
+</html>
