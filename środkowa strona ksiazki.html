@@ -17,17 +17,18 @@
   top: 0;
   overflow-x: hidden;
   padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 10px;
 }
 .left {
   left: 0;
   border-right-color: black;
   border-bottom-right-radius: 10px;
-  margin-left: 20px;
- 
 }
 .right {
   right: 0;
-  margin-left: 20px;
 }
 .centered {
   position: absolute;
@@ -38,7 +39,6 @@
 }
 button {
       color: black;
-      background-color: blueviolet;
       border-bottom: groove;
       border-top: groove;
       border-radius: 3px;
@@ -48,20 +48,17 @@ button {
       cursor: pointer;
       display: inline-block;
       position: absolute;
-      right: 0;
-      bottom: 25;
       font-style: initial;
-      text-decoration: underline darkblue 15px;
+      text-decoration: underline yellow 15px;
       text-decoration: wavy;
       font-size: 30px;
-     }
+}
      h1 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         color: royalblue;
         text-indent: 16px;
         font-size: 30px;
-        background-color: mediumturquoise;
-        background-size: 6%,6%;
+        text-align: center;
     }
     p {
         font-size: 20px;
@@ -70,13 +67,30 @@ button {
         text-indent: 19px;
         text-decoration: solid;
         text-decoration: underline blue;
-        background-color: mediumturquoise;
-        background-size: 10%,10%;
+        text-align: center;
      }
+     h2 {
+        text-align: center;
+        text-decoration: none;
+        color: red;
+        font-size: 22px;
+        font-family: 'Times New Roman', Times, serif;
+     }
+    img {
+        position: absolute;
+        bottom: 24%;
+        left: 40%;
+        right: 50%;
+    }
+    .button2 {
+        right: 50%;
+        bottom: 60;
+        background-color: lawngreen;
+    }
      </style>
      <body>
         <div class="split left">
-            <h1>Informacje na temat temerskiego oficera Vernona Roche'a(ciąg dalszy):</h1>
+          <b>  <h1>Informacje na temat temerskiego oficera Vernona Roche'a(ciąg dalszy):</h1>
             <p>Roche jest postacią, która nie wystapiła w książkach tylko w grze.</p>
             <p>Wystąpiła jedynie w drugiej i trzeciej części(z mniejszą ilością w trzeciej)</p>
             <p>Pod wpływem wyborów gracza może on zginąć(lepiej nie)</p>
@@ -84,12 +98,27 @@ button {
             <p>Był on dowódcą oddziału Niebieskich Pasów oraz jednym z najbardziej zaufanych ludzi króla Foltesta</p>
             <p>Przez okres swojej służby walczył z Nilfgaardem,buntownikami i elfami</p>
             <p>Największym jego wrogiem jest Iorweth-"zwykły skurwysyn"</p>
-            <video controls autoplay loop  width="470" height="410">
-                <source src="iorweth.mp4">
-            </video>
+            <p>Wideo z delikwentem na dole</p> </b>
+                <video controls autoplay loop  width="500" height="210">
+                    <source src="iorweth.mp4">
+                </video>
+            </div>
         </div>
         <div class="split right">
+            <h2>Dokończenie podrozdziału pt."Informacje":</h2>
+           <b> <p>Na załączonym filmiku było widać że Vernon z Iorwethem się nie lubią.</p>
+            <p>Był on największym wrogiem Vernona Roche'a przez całą 2 część.</p>
+            <p>Po 2 części jednak po Iorwecie słuch zaginął i nie pojawił się w 3</p>
+            <p>Oprócz elfa jego przeciwnikami byli przede wszystkim Nilfgaardczcy</p>
+            <p>Vernon całym sercem kochał swoją ojczyznę jaką była Temeria</p>
+            <p>Szybko awansował na wysokie szczeble w królewstwie aż został prawą reką Foltesta</p> </b>
+                <img width="400" height="200" src="temer.jpg">
+                <a href="2strona ksiazki.html" target="_blank">
+                    <button class="button button2">Przerzuć stronę w tył!!</button>
+                        <a href="4strona ksiazki.html" target="_blank"> 
+                            <button style="background-color: rgba(37, 20, 224, 0.133); right: 50; bottom: 60;">Przerzuć stronę w przód!!</button>
+             </div>
         
-        </div>
      </body>
 </html>
+
