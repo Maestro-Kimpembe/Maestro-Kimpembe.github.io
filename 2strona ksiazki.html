@@ -16,17 +16,18 @@
   top: 0;
   overflow-x: hidden;
   padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 10px;
 }
 .left {
   left: 0;
   border-right-color: black;
   border-bottom-right-radius: 10px;
-  margin-left: 20px;
- 
 }
 .right {
   right: 0;
-  margin-left: 20px;
 }
 .centered {
   position: absolute;
@@ -36,7 +37,7 @@
   text-align: center;
 }
 button {
-      color: yellow;
+      color: black;
       background-color: darkred;
       border-bottom: groove;
       border-top: groove;
@@ -47,8 +48,6 @@ button {
       cursor: pointer;
       display: inline-block;
       position: absolute;
-      right: 0;
-      bottom: 25;
       font-style: initial;
       text-decoration: underline yellow 15px;
       text-decoration: wavy;
@@ -81,15 +80,19 @@ button {
         font-size: 20px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         color: black;
-        text-indent: 19px;
         text-decoration: solid;
+        text-align: center;
+        position: relative;
      }
      .temeria {
         position: absolute;
         top: 75%;
-        left: 50%;
+        left: 35%;
         transform: translate(-50%, -50%);
         text-align: end;
+     }
+     ol {
+        text-align: center;
      }
     </style>
     <body>
@@ -103,27 +106,30 @@ button {
             <li>Zakończenie "Książki"</li>
         </ol>
         <p>Na umilenie wideło poniżej</p>
-            <center><h2>To całość tej pracy. Pierwsza część została przedstawiona po prawej stronie(chyba)</h2></center>
         <div class="temeria">
-            <video controls autoplay loop  width="310" height="310">
+            <video controls autoplay loop  width="350" height="210">
                 <source src="funky.mp4">
             </video>
         </div>
-            </div>
+    </div>
+    <center><h2>Na górze jest całość tej pracy. Pierwsza część została przedstawiona po prawej stronie(chyba)</h2></center>
         </div>
-        <div class="split right">
+        <div class="split right"> 
             <center><b><h3>Informacje na temat temerskiego oficera Vernona Roche'a:</h3></center></b>
-            <p>Pierwszą rzeczą, którą warto wspomnieć przy przybliżeniu wymienianej w całej pracy postaci jest to</p>
-            <p>że ona jest odpowiedzialny za pacyfikację Podgórza Mahakamskiego</p>
-            <p>Dobrze też powiedzieć o 2-krotnym odznajczeniu w boju owej postaci za męstwo w boju.</p>
-            <p>Należy też napomnieć o opcjonalnym (w zależności od fabuły) uczestnictwie w bitwie pod Kaer Morhen.</p>
-            <p>Resztę można zawrzeć w dalszej części.</p>
-            <p>Taki fajny cytat-----></p>
-            <a href="środkowa strona ksiazki.html" target="_blank">
-                <button>Przerzuć stronę dalej!!</button>
+            <p>Pierwszą rzeczą, którą warto wspomnieć przy postaci patrioty jest: </p>
+            <p>To że ona jest odpowiedzialny za pacyfikację Podgórza Mahakamskiego</p>
+            <p>Dobrze też powiedzieć o 2-krotnym odznajczeniu w boju Roche'a.</p>
+            <p>Może on też opcjonalnie walczyć w bitwie pod Kaer Morhen.</p>
+            <p>Reszta infromacji na jego temat są w dalszej części.</p>
+            <p>Taki fajny cytat</p>
+            <a href="okladka.html" target="_blank">
+                <button style="right: 0; bottom:40; width: 330;" >Przerzuć stronę w tył!!</button>
+                <a href="środkowa strona ksiazki.html" target="_blank"> 
+                    <button style="background-color: fuchsia; right: 0; bottom: 80; text-decoration: underline green; width: 330; height: 50;">Przerzuć stronę w przód!!</button>
             <div class="temeria">
                 <img width="269" height="200" src="cytat.jpg">
             </div>
         </div>
+    </div>
     </body>
 </html>
