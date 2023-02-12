@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <title>Kartka Walentynkowa 2023</title>
+    </head>
+    <body>
+        <style>
+            .pozycja {
+                position: absolute;
+                top: 160;
+                left: 65;
+                right: 0;
+                bottom: 0;
+                font-size: 50px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: red;
+                font-style: italic;
+            } 
+            br {
+                top: 210;
+                left: 260;
+                right: 0;
+                bottom: 0;
+            }
+            body {
+                background-image: url(wal.png);
+                background-size: 100% 105%;
+                background-repeat: no-repeat;
+            }
+         .serce {
+            display: inline-block;
+            width: 130px;
+            height: 130px;
+            background: hotpink;
+            position: relative;
+            color: transparent;
+            margin: 0 50px;
+           animation-name: pulse;
+           animation-iteration-count: infinite;
+           animation-duration: 1.2s;
+         }
+         .serce::after, .serce::before {
+            content: '';
+            width: 130px;
+            height: 130px;
+            background: hotpink;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: -50%;
+            animation-name: pulse;
+           animation-iteration-count: infinite;
+           animation-duration: 1.2s;
+         }
+         .serce::after {
+            top: -50%;
+            left: 0;
+            animation-name: pulse;
+           animation-iteration-count: infinite;
+           animation-duration: 1.2s;
+         }
+        @keyframes pulse {
+            0% { transform: scale(1) rotate(45deg);background-color: hotpink }
+            50% {transform: scale(1.1) rotate(45deg);background-color: aqua;}
+            100% { transform: scale(1) rotate(45deg);background-color: gold;}
+        }
+        img {
+            width: 200px;
+            height: 169px;
+            top: 35;
+            bottom: 0;
+            right: 0;
+            left: 1300;
+            position: absolute;
+            transition: height 2s;
+        }
+        img:hover {
+            height: 100px;
+        }
+        .pozycja2 {
+            position: absolute;
+            top: 40%;
+            bottom: 0;
+            left: 47%;
+            right: 0;
+        }
+        .kropki {
+            width: 46%;
+            height: 93.4%;
+            position: relative;
+            border: 23px dashed black;
+            background-repeat: no-repeat;
+        }
+        .kropki2 {
+            width: 49%;
+            height: 91.2%;
+            position: absolute;
+            border-left: none;
+            background-repeat: no-repeat;
+            border-bottom: 23px dashed black;
+            border-top: 23px dashed black;
+            border-right: 23px dashed black;
+            top: 9;
+            left: 750;
+            right: 0;
+            bottom: 0;
+        }
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 36px;
+            color: red;
+            font-style: italic;
+        }
+        p {
+            text-align: center;
+            text-decoration: underline;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 26px;
+            color: red;
+            font-style: italic;
+        }
+        .strzała {
+            position: absolute;
+            width: 100px;
+            height: 70px;
+            top: 0;
+            left: -400;
+            bottom: 0;
+            right: 0;
+            animation-name: arrow ;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes arrow {
+            from  {top: 0;
+            left: -400;
+            bottom: 0;
+            right: 0;}
+            to {top: 90;
+                left: -930;
+                right: 0;
+                bottom: 0;}
+        }
+        .kupidyn {
+            top: -5;
+            left: -250;
+            bottom: 0;
+            right: 0;
+            width: 120px;
+            height: 80px;
+            position: absolute;
+        }
+        </style>
+        <div class="kropki">
+            <div class="pozycja">
+                OD <span id="serce" class="serce">OSOBY</span> KONRADA <br><pre>DO         PANA SAŁACHA</pre> </br>
+            </div>
+        </div>
+        <div class="kropki2">
+        </div>
+        <div class="img1">
+            <img src="rob.jpg">
+        </div>
+            <div class="pozycja2">
+                <h1>Wierszyk</h1>
+                <p>Pan dobrze tą pracę oceni<br>
+                   I mój humor na lepsze się zmieni<br>
+                   Bardzo się przy mojej pracy starałem<br>
+                   I dobrą nagrodę za to chciałem<br>
+                   W niczym panu to przeszkodzi<br>
+                   Że zdolnemu uczniowi się powodzi<br> </p>
+            </div>
+            <div class="strzała">
+                <img src="strzała.png">
+            </div>
+            <div class="kupidyn">
+                <img src="kupidyn1.png">
+            </div>
+    </body>
+</html>
