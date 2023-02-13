@@ -168,7 +168,7 @@
             cursor: pointer;
             font-weight: bold;
             transform: -50% -50%;
-            top: 595px;
+            top: 495px;
             bottom: 0;
             left: 30px;
             right: 0;
@@ -181,11 +181,45 @@
             background: mediumvioletred ;
             
         }
+        .przycisk2 {
+            position: absolute;
+            width: 170px;
+            height: 100px;
+            border-radius: 16px;
+            border-width: 3px;
+            border-style: solid;
+            background-color: mediumvioletred;
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            transform: -50% -50%;
+            top: 595px;
+            bottom: 0;
+            left: 30px;
+            right: 0;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+        .przycisk2:hover {
+            width: 200px;
+            box-shadow: 0 0 25px lightcoral;
+            background: mediumvioletred ;
+        }
         </style>
         <script>
             function przycisk() {
                 {document.getElementById('kropki2').style.border="none";}
                 {document.getElementById('kropki').style.border="none";}
+            }
+            function przycisk2() {
+                {document.getElementById('kropki2').style.borderBottom="23px dashed black";}
+                {document.getElementById('kropki2').style.borderTop="23px dashed black";}
+                {document.getElementById('kropki2').style.borderRight="23px dashed black";}
+                {document.getElementById('kropki2').style.borderBottom="23px dashed black";}
+                {document.getElementById('kropki').style.border="23px dashed black";}
             }
         </script>
         <div id="kropki">
@@ -214,5 +248,6 @@
                 <img src="kupidyn1.png">
             </div>
             <button onclick="przycisk()" class="przycisk">Zmień wygląd!</button>
+            <button onclick="przycisk2()" class="przycisk2">Powróc do klasycznego!</button>
     </body>
 </html>
