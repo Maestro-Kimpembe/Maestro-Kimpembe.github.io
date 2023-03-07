@@ -1,0 +1,234 @@
+<html>
+    <head>
+<title>Praca parallax</title>
+        <style>
+            body {
+                margin: 0;
+                background-repeat: no-repeat;
+                background-size: 100%,100%;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                height: 100%;
+            }
+            .parallax {
+                background-image: url('wiedz.jpg');
+                height: 170%;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            html {
+                height: 100%;
+            }
+            .okładka {
+                background-color: darkred;
+                opacity: .7;
+                margin: 0 50px;
+                border-color: black;
+                border-radius: 13px;
+                border-width: 16px;
+                position: absolute;
+                top: 60px;
+                left: 0px ;
+                bottom: 0;
+                right: 0;
+                width: 530px;
+                height: 1000px;
+            }
+            h1 {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 25px;
+                font-style: italic;
+                font-weight: bolder;
+                text-align: center;
+            }
+            p {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+                font-size: 17px;
+                font-style: italic;
+                text-align: center;
+                font-weight: bolder;
+                color: black;
+            }
+            h2 {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 25px;
+                font-style: italic;
+                font-weight: bolder;
+                text-align: center;  
+            }
+            img {
+                width: 375px;
+                height: 330px;
+                position: absolute;
+                
+            }
+            .miejsce {
+                position: absolute;
+                top: 500px;
+            }
+            .drugibox {
+                position: absolute;
+                top: 60px;
+                left: 870px;
+                right: 0;
+                bottom: 0;
+                margin: 0 50px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                background-color: darkred;
+                width: 590px;
+                height: 500px;
+                opacity: .7;
+                border-color: black ;
+                border-radius: 16px;
+            }
+            h3 {
+                text-align: center;
+                color: black;
+                font-size: 25px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: bolder;
+                font-style: italic;
+                text-indent: 2px;
+                text-decoration: underline black;
+            }
+            h4 {
+                text-align: center;
+                color: black;
+                font-size: 25px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: bolder;
+                font-style: italic;
+                text-indent: 2px;
+                text-decoration: underline black;
+            }
+            .trzecibox {
+                position: absolute;
+                bottom: 0;
+                border-color: black;
+                border-radius: 16px;
+                margin: 0 50px;
+                opacity: .7;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                background-color: darkred;
+                top: 700px;
+                left: 860px;
+                width: 600px;
+                height: 360px;
+            }
+            h5 {
+                text-align: center;
+                color: black;
+                font-size: 25px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: bolder;
+                font-style: italic;
+                text-indent: 2px;
+                text-decoration: underline black;
+            }
+            ul {
+                color: black;
+                font: bolder;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-style: italic;
+                text-indent: 2px;
+                font-size: 17px;
+                font-weight: bolder;
+            }
+            img.box {
+                transition: all linear 0.7s;
+            }
+            img.hover-img {
+                position: relative;
+                top: -20px;
+                left: 70px;
+                opacity: 0;
+            }
+            .box:hover img {
+                opacity: 0;
+            }
+            .box:hover img.hover-img{
+                opacity: 1;
+            }
+            #pierwszy {
+                height: 120px;
+                width: 160px;
+                color: red;
+                background-color: gold;
+                font-size: 40px;
+                font-weight: bolder;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                position: absolute;
+                top: 1100px;
+                bottom: 0;
+                right: 0;
+                left: -40;
+                border-radius: 10px;
+                border-color: blue;
+                margin: 0 50px;
+                font-style: italic;
+            }
+        </style>
+        </head>
+        <body>
+        <div class="parallax"></div>
+        <div class="okładka">
+         <h1>Moja ulubiona gra jak narazie</h1>
+         <p>Pewnie zapyta pan dlaczego?<br>
+          Niestety nie miałem innego pomysłu na inną grę<br>
+          Są lepsze ale już tak wybrałem ¯\_(ツ)_/¯<br>
+         </p>
+         <h2>Okładka Wiedźmin 3:Dziki Gon</h2>
+         <div class="box">
+            <img style="top: 175px; left: 75px ; right: 0; bottom: 0;" src="okl.png">
+            <img class="hover-img" src="xbo.jpg">
+         </div>
+            <div class="miejsce">
+                <p style="text-align: center; text-indent: 70px; font-weight: bolder;">
+                    Jeśli ktoś jeszcze nie posiada tej gry to polecam ją ponieważ<br>
+                    Obecnie można ją kupić po bardzo niskiej cenie ponad 30zł<br>
+                    A na GOGu czasami zdarzy się nawet za darmo ( ͡° ͜ʖ ͡°)<br>
+                </p>
+                <p>
+                    W następnej linijce link do kupna gry(produkt sponsorowany)<br>
+                    <a href="https://www.gog.com/pl/game/the_witcher_3_wild_hunt_game_of_the_year_edition" target="_blank">Link do gry(błędny)</a><br>
+                    <a href="https://youtu.be/obmlZH3X9gs" target="_blank">Link do gry(poprawny 100%)</a><br>
+                </p>
+            </div>
+        </div>
+        <div class="drugibox">
+         <h3>Dokładniejszy obraz ulubionej gry</h3>
+         <p>
+            Akcja się dzieje na Kontynencie podzielonym przez<br>
+            III Wojnę Północną konfliktem pomiędzy Cesarstwem Nillfgaardu<br>
+            a zjednoczonymi Królewstwami Północy:Redanią oraz resztkami<br>
+            pozostałych królewstw które zostały pokonane przez Nillfgaard.<br>
+            Naszym zadaniem jako wiedźmin Geralt z Rivii m.in polować<br>
+            na potwory. Opis gry w mocnym skrócie<br>
+         </p>
+         <h4>Wymagania sprzętowe</h4>
+         <p>
+            Procesor Intel CPU Core i5 2500K 3,3 GHz lub konkurencyjny AMD Phenom II X4 940.<br>
+            Karta graficzna NVIDIA GeForce GTX 660 albo AMD Radeon HD 7870.<br>
+            Co najmniej 6 GB RAM.<br>
+            Windows 7 lub Windows 8.1 (64-bit).<br>
+         </p>
+        </div>
+        <div class="trzecibox">
+         <h5 style="bottom: 10px;">Charakterystyczne cechy gry</h5>
+         <p>
+            <ul>Wiedźmin został ogłoszony w 2015 Grą Roku</ul><br>
+            <ul>Został stworzony przez polskie studio CD PROJEKT RED</ul><br>
+            <ul>Został stworzony na podstawie polskiej książki</ul><br>
+            <ul>Posiada nadal po 8 latach ładną grafikę</ul><br>
+         </p>
+        </div>
+        <button id="pierwszy">Kliknij HTML <a href="tekst.txt" target="_blank"> </button>
+    <audio autoplay id="bgAudio">
+            <source src="wie.mp3">
+        </audio>
+        <script>
+            var audio = document.getElementById("bgAudio");
+            audio.volume = 1;
+        </script>
+    </body>
