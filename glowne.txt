@@ -1,158 +1,179 @@
 <html>
-<head>
-    <title>Główne menu</title>
-    <link rel="shortcut icon" href="wc.jpg">
-</head>
-<style>
-    .zapelnienie {
-        background-image: url(black.png);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 150px;
-        position: absolute;
-    }
-    .zapelnienie1 {
-        background-image: url(black.png);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        top: 165%;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 150px;
-        position: absolute;
-    }
-    .tlo {
-        background-image: url(cr7.jpg);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        top: 60px;
-        left: 140px;
-        right: 0;
-        bottom: 0;
-        width: 680px;
-        height: 550px;
-        position: absolute;
-    }
-    header {
-        position: absolute;
-        text-align: center;
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Główne menu</title>
+        <link rel="shortcut icon" href="wc.jpg">
+    </head>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        #q {
+            position: absolute;
+            display: flexbox;
+            top: -1%;
+            left: -3.5%;
+            right: 0;
+            bottom: 0;
+            font-family: Font;
+            font-size: 36px;
+            text-decoration: underline;
+            font-weight: bold;
+            color: black;
+            width: 33%;
+            height: 18.6%;
+            margin: 0 50px;
+            border-radius: 16px;
+            background-image: url(klass.jpg);
+        }
+        @font-face {
         font-family: Font;
-        font-size: 27px;
-        font-weight: bold;
-        color: black;
-    }
-    header #but {
-        font-family: Font;
-        color: black;
-        font-weight: bold;
+   src: url(FCSSCNapoli20182019.woff); 
+        }
+       #w {
         position: absolute;
-        left: -60px;
-        bottom: 10px;
-        right: 0;
-        top: -10px;
-        width: 530px;
-        height: 150px;
-        margin: 0 50px;
-        font-size: 47px;
-        border-radius: 16px;
-        background-image: url(klass.jpg);
-        text-decoration: underline;
-    }
-    header #butt {
-        font-family: Font;
-        color: black;
-        font-weight: bold;
+            display: flexbox;
+            top: -1%;
+            left: 29%;
+            right: 0;
+            bottom: 0;
+            font-family: Font;
+            font-size: 36px;
+            text-decoration: underline;
+            font-weight: bold;
+            color: black;
+            width: 35%;
+            height: 18.6%;
+            margin: 0 50px;
+            border-radius: 16px;
+            background-image: url(pusk.jpg);
+       }
+       #e {
         position: absolute;
-        height: 150px;
-        margin: 0 50px;
-        font-size: 47px;
-        border-radius: 16px;
-        background-image: url(pusk.jpg);
-        top: -10px;
-        bottom: 0;
-        right: 0;
-        left: 470px;
-        width: 510px;
-        height: 150px;
-        border-color: black;
-        text-decoration: underline;
-    }
-    header #butto {
-        font-family: Font;
-        color: black;
-        font-weight: bold;
+            display: flexbox;
+            top: -1%;
+            left: 64%;
+            right: 0;
+            bottom: 0;
+            font-family: Font;
+            font-size: 36px;
+            text-decoration: underline;
+            font-weight: bold;
+            color: black;
+            width: 33%;
+            height: 18.6%;
+            margin: 0 50px;
+            border-radius: 16px;
+            background-image: url(wid.png);
+       }
+       #r {
         position: absolute;
-        height: 150px;
-        margin: 0 50px;
-        font-size: 47px;
-        border-radius: 16px;
-        top: -10px;
-        bottom: 0;
-        right: 0;
-        width: 480px;
-        height: 150px;
-        border-color: black;
-        left: 980px;
-        background-image: url(wid.png);
-        text-decoration: underline;
+            display: flexbox;
+            top: 90%;
+            left: -4%;
+            right: 0;
+            bottom: 0;
+            font-family: Font;
+            font-size: 36px;
+            text-decoration: underline;
+            font-weight: bold;
+            color: black;
+            width: 26%;
+            height: 10%;
+            margin: 0 50px;
+            border-radius: 16px;
+            background-image: url(pit.jpg);
+
+       }
+       @keyframes incredible {
+        0% {
+            visibility: hidden;
+        }
+        30% {
+            visibility: hidden;
+        }
+        70% {
+            visibility: hidden;
+        }
+        80% {
+            visibility: visible;
+        }
+        100% {
+            visibility: visible;
+        }
     }
-    @font-face {
-        font-family: Font;
-   src: url(FCSSCNapoli20182019.woff);
+    @keyframes incredible2 {
+        0% {
+            visibility: visible;
+        }
+        30% {
+            visibility: visible;
+        }
+        50% {
+            visibility: visible;
+        }
+        80% {
+            visibility: visible;
+        }
+        100% {
+            visibility: hidden;
+        }
     }
-    .boxik {
-        height: 460px;
-        width: 700px;
-        margin: 0 50px;
-        border-radius: 16px;
+       #t {
         position: absolute;
-        top: 280px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        font-family: Font;
-    }
-    .boxik img {
-        width: 500px;
-        height: 360px;
+            display: flexbox;
+            top: 90%;
+            left: 22%;
+            right: 0;
+            bottom: 0;
+            font-family: Font;
+            font-size: 36px;
+            text-decoration: underline;
+            font-weight: bold;
+            color: black;
+            width: 28%;
+            height: 10%;
+            margin: 0 50px;
+            border-radius: 16px;
+            background-image: url(lewa.jpg);
+       }
+       #y {
         position: absolute;
-        top: 50px;
-        left: 0;
-        bottom: 0;
-        right: 0;
-    }
-    .boxik #jeden {
-        width: 260px;
-        height: 170px;
-        position: inherit;
-        top: 20px;
-        left: 90px;
-        bottom: 0;
-        right: 0;
-        animation-name: czechy2;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-    }
-    .boxik #dwa {
-        width: 260px;
-        height: 170px;
+            top: 90%;
+            left: 50%;
+            right: 0;
+            bottom: 0;
+            font-family: Font;
+            font-size: 36px;
+            text-decoration: underline;
+            font-weight: bold;
+            color: black;
+            width: 25%;
+            height: 10%;
+            margin: 0 50px;
+            border-radius: 16px;
+            background-image: url(mag2.jpg);
+       }
+       #u {
         position: absolute;
-        top: 20px;
-        left: 90px;
-        bottom: 0;
-        right: 0;
-        animation-name: czechy3;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-    }
-    @keyframes czechy3 {
+            display: flexbox;
+            top: 90%;
+            left: 75%;
+            right: 0;
+            bottom: 0;
+            font-family: Font;
+            font-size: 36px;
+            text-decoration: underline;
+            font-weight: bold;
+            color: black;
+            width: 21.7%;
+            height: 10%;
+            margin: 0 50px;
+            border-radius: 16px;
+            background-image: url(ars.jpg);
+       }
+       @keyframes czechy3 {
         0% {
             visibility: hidden;
         }
@@ -199,67 +220,20 @@
             visibility: hidden;
         }
     }
-    .przycisk #on {
-        font-family: Font;
-        color: black;
-        font-weight: bold;
+    .arrow #arr {
         position: absolute;
-        width: 410px;
-        height: 150px;
-        margin: 0 50px;
-        font-size: 47px;
-        border-radius: 16px;
-        background-image: url(pit.jpg);
-        text-decoration: underline;
-        top: 1192px;
-        left: -50px;
         right: 0;
+        left: 31%;
+        top: 30%;
         bottom: 0;
-        border-radius: 16px;
-        font-size: 47px;
-    }
-    .przycisk #onn {
-        font-family: Font;
-        color: black;
-        font-weight: bold;
-        position: absolute;
-        width: 410px;
-        height: 150px;
-        margin: 0 50px;
-        font-size: 47px;
-        border-radius: 16px;
-        background-image: url(lewa.jpg);
-        text-decoration: underline;
-        top: 1192px;
-        left: 359px;
-        right: 0;
-        bottom: 0;
-        border-radius: 16px;
-        font-size: 47px;
-    }
-    .przycisk #ver {
-        font-family: Font;
-        color: black;
-        font-weight: bold;
-        position: absolute;
-        width: 373px;
-        height: 150px;
-        margin: 0 50px;
-        font-size: 47px;
-        border-radius: 16px;
-        background-image: url(mag2.jpg);
-        text-decoration: underline;
-        top: 1192px;
-        left: 768px;
-        right: 0;
-        bottom: 0;
-        border-radius: 16px;
-        font-size: 47px;
+        width: 130px;
+        height: 140px;
+        display: flexbox;
     }
     .incredible #inc {
         position: absolute;
-        top: 300px;
-        left: 570px;
+        top: 30%;
+        left: 39.5%;
         right: 0;
         bottom: 0;
         width: 250px;
@@ -267,6 +241,7 @@
         animation-name: incredible2;
         animation-duration: 8s;
         animation-iteration-count: infinite;
+        display: flexbox;
     }
     .trawa {
         position: absolute;
@@ -279,11 +254,12 @@
         background-image: url(tlo.jpg);
         background-size: 100% 100%;
         background-repeat: no-repeat;
+        display: flexbox;
     }
     .incredible #inc2 {
         position: absolute;
-        top: 300px;
-        left: 570px;
+        top: 30%;
+        left: 39.5%;
         right: 0;
         bottom: 0;
         width: 250px;
@@ -291,180 +267,113 @@
         animation-name: incredible;
         animation-duration: 8s;
         animation-iteration-count: infinite;
+        display: flexbox;
     }
-    @keyframes incredible {
-        0% {
-            visibility: hidden;
-        }
-        30% {
-            visibility: hidden;
-        }
-        70% {
-            visibility: hidden;
-        }
-        80% {
-            visibility: visible;
-        }
-        100% {
-            visibility: visible;
-        }
-    }
-    @keyframes incredible2 {
-        0% {
-            visibility: visible;
-        }
-        30% {
-            visibility: visible;
-        }
-        50% {
-            visibility: visible;
-        }
-        80% {
-            visibility: visible;
-        }
-        100% {
-            visibility: hidden;
-        }
-    }
-    .kod #menu {
+     #jeden {
+        width: 260px;
+        height: 170px;
         position: absolute;
-        width: 330px;
-        height: 150px;
-        top: 1192px;
-        left: 1139px;
-        right: 0;
-        bottom: 0;
-        margin: 0 50px;
-        border-radius: 16px;
-        border-color: black;
-        text-decoration: underline;
-        font-family: Font;
-        font-weight: bold;
-        font-size: 47px;
-        background-image: url(ars.jpg);
-    }
-     #ha {
-        font-family: Font;
-        font-size: 37px;
-        text-align: center;
-        top: 0;
-        position: absolute;
-        top: 420px;
-        left: -880px;
+        top: 30%;
+        left: 10%;
         bottom: 0;
         right: 0;
-        line-height: -400px;
-        color: red;
+        animation-name: czechy2;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        display: flexbox;
     }
-    .naglowek {
-        font-family: Font;
-        font-size: 37px;
-        top: -230px;
-        bottom: 0;
+     #dwa {
+        width: 260px;
+        height: 170px;
         position: absolute;
+        top: 30%;
+        left: 10%;
+        bottom: 0;
         right: 0;
-        left: 280px;
-        text-align: center;
+        animation-name: czechy3;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        display: flexbox;
     }
-    .arrow #arr {
-        position: absolute;
-        right: 0;
-        left: 410px;
-        top: 320px;
-        bottom: 0;
-        width: 130px;
-        height: 140px;
-
-    }
-    .quote {
-        position: absolute;
-        height: 300px;
-        width: 570px;
-        left: 780px;
-        bottom: 0;
-        background-image: url(quo.jpg);
+    .tlo {
+        background-image: url(cr7.jpg);
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        top: 20%;
+        left: 10%;
         right: 0;
-        top: 560px;
-    }
-    .quote #cytat {
+        bottom: 0;
+        width: 46%;
+        height: 40%;
         position: absolute;
+        display: flexbox;
+    }
+    .naglowek #ha {
+        position: absolute;
+        display: flexbox;
+        color: red;
         font-family: Font;
         font-size: 36px;
-        color: black;
-        left: 190px;
-        top: 50px;
+        top: 20%;
+        left: 23%;
+        right: 0;
+        
     }
-    .quote #cytat2 {
-        position: absolute;
-        font-family: Font;
-        font-size: 36px;
-        color: black;
-        left: 43%;
-        top: 220px ;
-    }
-</style>
-<script>
-    function m() {
+    </style>
+    <script>
+        var audio = document.getElementById("bgAudio");
+            audio.volume = 1;
+            function m() {
         if (document.getElementById("inc").src == "inc.png"){
         document.getElementById("inc").src = "inc2.png";
     } else {
         document.getElementById("inc").src = "inc2.png";
     }
 }
-var audio = document.getElementById("bgAudio");
-            audio.volume = 1;
-</script>
-<div class="zapelnienie"></div>
-<div class="zapelnienie1"></div>
-<body>
-    <header>
-        <a href="second_page.html" target="_blank">
-            <button id="but">Nazwa i zasady</button>
+    </script>
+    <body>
+        
+        <div class="przyciski">
+            <a href="second_page.html" target="_blank">
+                <button id="q">Zasady gry</button>
+            </a>
             <a href="third_page.html" target="_blank">
-                <button id="butt">Filmik wedlug zyczenia</button>
-                <a href="fourth_page.html" target="_blank">
-                    <button id="butto">Ulubiony reprezentant</button>
-                </a>
-    </header>
-    <div class="przycisk">
-        <a href="second_page.txt" target="_blank">
-            <button id="on">Kod pierwszej strony</button>
-            <a href="third_page.txt" target="_blank">
-                <button id="onn">Kod drugiej strony</button>
-                <a href="fourth_page.txt" target="_blank">
-                    <button id="ver">Kod ostatniej strony</button>
-                </a>
-    </div>
-    <div class="kod">
-        <a href="glowne.txt" target="_blank">
-            <button id="menu">Kod obecnej strony</button>
-    </div>
+                <button id="w">Filmik</button>
+            </a>
+            <a href="fourth_page.html" target="_blank">
+                <button id="e">Ulubiony gracz</button>
+            </a>
+        </div>
         <div class="trawa">
-            <div class="quote">
-                <p id="cytat">Praca TOP<br>
-                     5 zasluzona <br> </p>
-                   <p id="cytat2"> -Robert Lewandowski</p>
-            </div>
+            <a href="second_page.txt" target="_blank">
+                <button id="r">Kod pierwszej strony</button>
+            </a>
+            <a href="third_page.txt" target="_blank">
+                <button id="t">Kod drugiej strony</button>
+            </a>
+            <a href="fourth_page.txt" target="_blank">
+                <button id="y">Kod trzeciej strony</button>
+            </a>
+            <a href="glowne.txt" target="_blank">
+                <button id="u">Kod obecnej strony</button>
+            </a>
             <div class="tlo"></div>
             <div class="boxik">
                 <img id="jeden" src="cze.jpg">
                 <img id="dwa" src="fajne.PNG">
-           </div>
+            </div>
             <div class="incredible">
                 <img id="inc" src="inc.png">
                 <img id="inc2" src="inc2.png">
             </div>
-            <div class="naglowek">
-                <h1 id="ha">Moja najszczersza reakcja</h1>
-            </div>
             <div class="arrow">
                 <img id="arr" src="arr.png">
             </div>
+            <div class="naglowek">
+                <p id="ha">Moja najszczersza reakcja</p>
+            </div>
         </div>
-    <audio autoplay loop id="bgAudio">
-        <source src="ok.mp3">
-       
-</body>
+        <audio autoplay loop id="bgAudio">
+            <source src="ok.mp3">
+    </body>
 </html>
