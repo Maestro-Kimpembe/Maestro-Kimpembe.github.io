@@ -333,7 +333,12 @@
            color: white;
            box-shadow: 5px 10px 18px green;
            }
+           
         </style>
+        <script>
+            var audio = document.getElementById("bgAudio");
+            audio.volume = 0.7;
+        </script>
  <div class="zdjecie1">
 <img id="ole" src="olefromthevolley.jpg">
  </div>
@@ -398,5 +403,7 @@
         <button id="nastepne">Przejdź dalej</button>
      </a>
  </div>
+ <audio autoplay loop id="bgAudio">
+    <source src="yabadaba.mp3">
     </body>
 </html>
