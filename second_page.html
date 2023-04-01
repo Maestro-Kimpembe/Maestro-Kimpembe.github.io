@@ -1,2 +1,402 @@
 <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zasady gry</title>
+    <link rel="shortcut icon" href="wc.jpg">
+    </head>
+    <body>
+        <style>
+            body {
+                width: 98%;
+                height: 98%;
+                background-image: url(ball.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 175%;
+            }
+           .box {
+            border-radius: 16px;
+            position: absolute;
+            border: 8px solid black;
+            margin: 0 50px;
+            background-color: rgba(215, 161, 31, 0.39);
+            top: 10%;
+            left: 30%;
+            width: 32%;
+            height: 37%;
+            border-color: black;
+            border-width: 8px;
+            display: flexbox;
+            overflow: hidden;
+            z-index: 2;
+           }
+           .box #one {
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+            font-family: Font;
+            text-align: center;
+            font-style: italic;
+           }
+           @font-face {
+        font-family: Font;
+   src: url(FCSSCNapoli20182019.woff);
+           }
+           p {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Font;
+            text-indent: 2px;
+            color: black;
+            z-index: 2;
+            opacity: 1;
+           }
+           .zdjecie1 {
+            position: absolute;
+            left: 5%;
+            top: 2%;
+            border: 8px solid black;
+            margin: 0 50px;
+            width: 32%;
+            height: 32%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flexbox;
+            overflow: hidden;
+            border-radius: 16px;
+            z-index: 2;
+           }
+           .zdjecie1 #ole {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+           }
+           .zdjecie2 {
+            position: absolute;
+            left: 55%;
+            top: 2%;
+            border: 8px solid black;
+            margin: 0 50px;
+            width: 32%;
+            height: 32%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flexbox;
+            overflow: hidden;
+            border-radius: 16px;
+            z-index: 2;
+           }
+           .zdjecie2 #jonesta {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+           }
+           .box2 {
+            border-radius: 16px;
+            position: absolute;
+            border: 8px solid black;
+            margin: 0 50px;
+            background-color: rgba(215, 161, 31, 0.39);
+            top: 62%;
+            left: 30%;
+            width: 32%;
+            height: 37%;
+            border-color: black;
+            border-width: 8px;
+            display: flexbox;
+            overflow: hidden;
+            z-index: 2;
+           }
+           .box2 #two {
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+            font-family: Font;
+            text-align: center;
+            font-style: italic;
+           }
+           .box2 p {
+            text-align: center;
+            font-size: 21px;
+            font-weight: bold;
+            font-family: Font;
+            text-indent: 2px;
+            color: black;
+            z-index: 2;
+            opacity: 1;
+           }
+           .zdjecie3 {
+            position: absolute;
+            left: 55%;
+            top: 42%;
+            border: 8px solid black;
+            margin: 0 50px;
+            width: 32%;
+            height: 32%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flexbox;
+            overflow: hidden;
+            border-radius: 16px;
+            z-index: 2;
+           }
+           .zdjecie3 #sraka {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+           }
+           .zdjecie4 {
+            position: absolute;
+            left: 5%;
+            top: 42%;
+            border: 8px solid black;
+            margin: 0 50px;
+            width: 32%;
+            height: 32%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flexbox;
+            overflow: hidden;
+            border-radius: 16px;
+            z-index: 2;
+            justify-content: center;
+           }
+           .zdjecie4 #goat {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+           }
+           .zdjecie5 {
+            position: absolute;
+            left: 5%;
+            top: 82%;
+            border: 8px solid black;
+            margin: 0 50px;
+            width: 32%;
+            height: 32%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flexbox;
+            overflow: hidden;
+            border-radius: 16px;
+            z-index: 2;
+            justify-content: center;
+           }
+           .zdjecie5 #henry {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+           }
+           .zdjecie6 {
+            position: absolute;
+            left: 55%;
+            top: 82%;
+            border: 8px solid black;
+            margin: 0 50px;
+            width: 32%;
+            height: 32%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flexbox;
+            overflow: hidden;
+            border-radius: 16px;
+            z-index: 2;
+            justify-content: center;
+           }
+           .zdjecie6 #szantos {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+           }
+           .box3 {
+            border-radius: 16px;
+            position: absolute;
+            border: 8px solid black;
+            margin: 0 50px;
+            background-color: rgba(215, 161, 31, 0.39);
+            top: 110%;
+            left: 30%;
+            width: 32%;
+            height: 37%;
+            border-color: black;
+            border-width: 8px;
+            display: flexbox;
+            overflow: hidden;
+            z-index: 2;
+           }
+           .box3 #three {
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+            font-family: Font;
+            text-align: center;
+            font-style: italic;
+           }
+           .box3 p {
+            text-align: center;
+            font-size: 21px;
+            font-weight: bold;
+            font-family: Font;
+            text-indent: 2px;
+            color: black;
+            z-index: 2;
+            opacity: 1;
+           }
+           .zdjecie7 {
+            position: absolute;
+            left: 5%;
+            top: 122%;
+            border: 8px solid black;
+            margin: 0 50px;
+            width: 32%;
+            height: 32%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flexbox;
+            overflow: hidden;
+            border-radius: 16px;
+            z-index: 2;
+            justify-content: center;
+           }
+           .zdjecie7 #speed {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+           }
+           .zdjecie8 {
+            position: absolute;
+            left: 55%;
+            top: 122%;
+            border: 8px solid black;
+            margin: 0 50px;
+            width: 32%;
+            height: 32%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flexbox;
+            overflow: hidden;
+            border-radius: 16px;
+            z-index: 2;
+            justify-content: center;
+           }
+           .zdjecie8 #goalski {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            justify-content:center;
+           }
+           .przyciski #poprzednie {
+            position: absolute;
+                display: flexbox;
+                left: 1%;
+                top: 160%;
+                background-color:red;
+                width: 12%;
+                height: 12%;
+                transition: 1s;
+                color: black;
+                color: black;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           }
+           .przyciski #poprzednie:hover {
+           background-color:darkgoldenrod;
+           color: white;
+           box-shadow: 5px 10px 18px green;
+           }
+           .przyciski #nastepne {
+            position: absolute;
+                display: flexbox;
+                left: 87%;
+                top: 160%;
+                background-color:red;
+                width: 12%;
+                height: 12%;
+                transition: 1s;
+                color: black;
+                color: black;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           }
+           .przyciski #nastepne:hover {
+            background-color:darkgoldenrod;
+           color: white;
+           box-shadow: 5px 10px 18px green;
+           }
+        </style>
+ <div class="zdjecie1">
+<img id="ole" src="olefromthevolley.jpg">
+ </div>
+ <div class="zdjecie2">
+    <img src="jonesta.jpg" id="jonesta">
+ </div>
+ <div class="zdjecie3">
+    <img id="sraka" src="sraka.jpg">
+ </div>
+ <div class="zdjecie4">
+    <img src="goat2.png" id="goat">
+ </div>
+ <div class="zdjecie5">
+    <img src="henry.jpg" id="henry">
+ </div>
+ <div class="zdjecie6">
+    <img src="kaba.jpg" id="szantos">
+ </div>
+ <div class="zdjecie7">
+    <img src="showspeed.jpg" id="speed">
+ </div>
+ <div class="zdjecie8">
+    <img src="goalski.jpg" id="goalski">
+ </div>
+ <div class="box">
+    <h1 id="one">Podstawowe zasady</h1>
+    <p>
+       1. Mecze rozgrywane sa na polu gry wyznaczonym w postaci prostokata <br>
+        o szerokosci od 45 do 90 m i dlugosci od 90 do 120 m <br>
+        2.Zawodnicy jednej druzyny (poza bramkarzem) nosza w trakcie zawodow taki sam ubior<br>
+         ktory odroznia ich od zawodnikow druzyny przeciwnej. <br>
+         3.Pelny sklad druzyny liczy 11 zawodnikow, w tym bramkarz <br>
+         4.Zawodnik druzyny atakujacej znajduje sie na pozycji spalonej, gdy jest na polowie przeciwnika i w <br>
+          momencie podania do niego pilki ma przed soba mniej niz dwoch graczy druzyny przeciwnej <br>
+    </p>
+ </div>
+ <div class="box2">
+    <h2 id="two">Najpopularniejszy sport na swiecie</h2>
+    <p>
+        Pilka nozna jest najbardziej popularnym sportem na swiecie co przyciaga rowniez bogatych sponsorow<br>
+         ktorzy chetnie umieszczaja swoje loga na koszulkach. <br>
+         Popularnosc pilki noznej wsrod fanow zmierzyla firma badawcza Nielsen<br>
+         40 proc. ludzi na swiecie interesuje sie tym sportem.<br>
+         Z 37 proc. fanow pilki noznej to kobiety. <br>
+    </p>
+ </div>
+ <div class="box3">
+    <h3 id="three">Powstanie sportu</h3>
+    <p>
+        Pilka nozna powstala juz w latach 50. XIX wieku w Anglii i wymyslili ja tamtejsi studenci<br>
+        W 1888 roku zostaly wymyslone rozgrywki ligowe, ktore sa organizowane w kazdym panstwie na swiecie <br>
+        Do najpopularniejszych lig naleza m.in :Premier League, La Liga Santander, Ligue 1, Bundesliga czy Serie A TIM<br>
+        A najpopularniejsze kluby to:Inter Mediolan, AC Milan, Juventus, FC Barcelona, Real Madryt, Chealsea, Arsenal<br>
+        Tottenham,Manchester United, Manchester City, Liverpool, Bayern Monachium, Borussia Dortmund i P$G<br>
+    </p>
+ </div>
+ <div class="przyciski">
+    <a href="glowne.html" target="_blank">
+        <button id="poprzednie">Przejdź wcześniej</button>
+     </a>
+     <a href="third_page.html" target="_blank">
+        <button id="nastepne">Przejdź dalej</button>
+     </a>
+ </div>
+    </body>
 </html>
