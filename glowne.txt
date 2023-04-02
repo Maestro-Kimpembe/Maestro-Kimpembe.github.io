@@ -319,6 +319,46 @@
         right: 0;
         
     }
+    @media only screen and (min-width:800px) {
+        .burgeros {
+            display: none;
+        }
+        ul {
+            display: none;
+        }
+        nav {
+            display: none;
+        }
+    }
+    @media only screen and (max-width:800px)  {
+        .przyciski {
+            display: none;
+        }
+        .trawa {
+            top: 0%;
+            height: 1195px;
+        }
+        .tlo {
+            width: 76%;
+        }
+        .incredible #inc {
+         left: 60%;
+         width: 200px;
+        }
+        .incredible #inc2 {
+            left: 60%;
+            width: 200px;
+        }
+        #jeden {
+            width: 200px;     
+        }
+        #dwa {
+            width: 200px;
+        }
+        .arrow #arr {
+            left: 37%;
+        }
+    }
     </style>
     <script>
         var audio = document.getElementById("bgAudio");
