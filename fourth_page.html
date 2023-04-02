@@ -1,2 +1,360 @@
 <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ulubiony gracz</title>
+        <link rel="shortcut icon" href="wc.jpg">
+    </head>
+    <body>
+        <style>
+            body {
+                width: 98%;
+                height: 98%;
+                background-image: url(ball.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-size: cover;
+                background-position: center, center 100%;
+                background-attachment: fixed, fixed;
+                transition: background-position 0.5s ease-in-out;
+            }
+            .box {
+            border-radius: 16px;
+            border: 8px solid black;
+            color: black;
+            font-family:Font ;
+            background-color: rgba(83, 5, 250, 0.6);
+            margin: 0 50px;
+            display: flexbox;
+            z-index: 2;
+            height: 32%;
+            width: 30%;
+            left: 9%;
+            top: 9%;
+            position: absolute;
+            overflow: hidden;
+            animation-name: siu;
+            animation-iteration-count: infinite;
+            animation-duration: 7s;
+            animation-timing-function:cubic-bezier(0.95, 0.05, 0.795, 0.035)
+            }
+            .box #one {
+                text-align: center;
+                font-size: 30px;
+                color: black;
+                font-family: Font;
+                font-style: italic;
+                text-decoration: underline;
+            }
+            .zdjecie1 {
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            border: 8px solid black;
+            margin: 0 50px;
+            width: 32%;
+            height: 32%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flexbox;
+            overflow: hidden;
+            border-radius: 16px;
+            z-index: 2;
+            animation-name: siu1;
+            animation-iteration-count: infinite;
+            animation-duration: 7s;
+            animation-timing-function:cubic-bezier(0.95, 0.05, 0.795, 0.035)
+            }
+            .zdjecie1 #pessi {
+                position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            }
+            .box2 {
+                border-radius: 16px;
+            border: 8px solid black;
+            color: black;
+            font-family:Font ;
+            background-color: rgba(83, 5, 250, 0.6);
+            margin: 0 50px;
+            display: flexbox;
+            z-index: 2;
+            height: 32%;
+            width: 30%;
+            left: 35%;
+            top: 60%;
+            position: absolute;
+            overflow: hidden; 
+            animation-name: records;
+            animation-iteration-count: infinite;
+            animation-duration: 7s;
+            animation-timing-function:cubic-bezier(0.95, 0.05, 0.795, 0.035)
+            }
+            .box2 #two {
+                text-align: center;
+                font-size: 30px;
+                color: black;
+                font-family: Font;
+                font-style: italic;
+                text-decoration: underline;
+            }
+            .zdjecie2 {
+                position: absolute;
+            left: 25%;
+            top: 48%;
+            border: 8px solid black;
+            margin: 0 50px;
+            width: 32%;
+            height: 32%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flexbox;
+            overflow: hidden;
+            border-radius: 16px;
+            z-index: 2;
+            animation-name: records2;
+            animation-iteration-count: infinite;
+            animation-duration: 7s;
+            animation-timing-function:cubic-bezier(0.95, 0.05, 0.795, 0.035)
+            }
+            .zdjecie2 #sewy {
+                position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            }
+            .box3 {
+                border-radius: 16px;
+            border: 8px solid black;
+            color: black;
+            font-family:Font ;
+            background-color: rgba(83, 5, 250, 0.6);
+            margin: 0 50px;
+            display: flexbox;
+            z-index: 2;
+            height: 32%;
+            width: 30%;
+            left: 70%;
+            top: 110%;
+            position: absolute;
+            overflow: hidden; 
+            animation-name: pessi;
+            animation-iteration-count: infinite;
+            animation-duration: 7s;
+            animation-timing-function:cubic-bezier(0.95, 0.05, 0.795, 0.035)
+            }
+            .box3 #three {
+                text-align: center;
+                font-size: 30px;
+                color: black;
+                font-family: Font;
+                font-style: italic;
+                text-decoration: underline;
+            }
+            .zdjecie3 {
+                position: absolute;
+            left: 60%;
+            top: 95%;
+            border: 8px solid black;
+            margin: 0 50px;
+            width: 32%;
+            height: 32%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flexbox;
+            overflow: hidden;
+            border-radius: 16px;
+            z-index: 2;
+            animation-name: pessi1;
+            animation-iteration-count: infinite;
+            animation-duration: 7s;
+            animation-timing-function:cubic-bezier(0.95, 0.05, 0.795, 0.035)
+            }
+            .zdjecie3 #man {
+                position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            }
+            @keyframes siu {
+                from {left: 9%; top: 9%;}
+                to {left: 65%; top: 9%;}
+            }
+            @keyframes siu1 {
+                from {top: 0%; left: 0%;}
+                to {top: 0%; left: 54%;}
+            }
+            @keyframes records {
+                from {top: 60%; left: 10%;}
+                to {top: 60%; left: 65%;}
+            }
+            @keyframes records2 {
+                from {top: 48%; left: 0%;}
+                to {top: 48%; left: 54%;}
+            }
+            @keyframes pessi {
+                from {top: 110%; left: 10%;}
+                to{top: 110%;left: 65%;}
+            }
+            @keyframes pessi1 {
+                from {top: 95%; left: 0%;}
+                to {top: 95%; left: 54%;}
+            }
+            @keyframes wybuch {
+                0% {visibility: hidden;}
+                16% {visibility: hidden;}
+                32% {visibility: hidden;}
+                46% {visibility: hidden;}
+                60% {visibility: hidden;}
+                74% {visibility: hidden;}
+                88% {visibility: hidden;}
+                101% {visibility: visible;}
+            }
+            .wybuch1 #ex {
+                position: absolute;
+                left: 80%;
+                top: 9%;
+                width: 25%;
+                height: 25%;
+                z-index: 2;
+                overflow: hidden;
+                animation-name: wybuch;
+                animation-duration: 7.15s;
+                animation-iteration-count: infinite;
+            }
+            .wybuch2 #exo {
+                position: absolute;
+                left: 80%;
+                top: 50%;
+                width: 25%;
+                height: 25%;
+                z-index: 2;
+                overflow: hidden;
+                animation-name: wybuch;
+                animation-duration: 7.15s;
+                animation-iteration-count: infinite;
+            }
+            .wybuch3 #exop {
+                position: absolute;
+                left: 80%;
+                top: 100%;
+                width: 25%;
+                height: 25%;
+                z-index: 2;
+                overflow: hidden;
+                animation-name: wybuch;
+                animation-duration: 7.15s;
+                animation-iteration-count: infinite;
+            }
+            p {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Font;
+            text-indent: 2px;
+            color: black;
+            z-index: 2;
+            opacity: 1;
+            }
+            .przycisk #wczesniej {
+                position: absolute;
+                display: flexbox;
+                left: 1%;
+                top: 150%;
+                background-color:red;
+                width: 12%;
+                height: 12%;
+                transition: 1s;
+                color: black;
+                color: black;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .przycisk #wczesniej:hover {
+           background-color:darkgoldenrod;
+           color: white;
+           box-shadow: 5px 10px 18px green;
+           }
+           .przycisk #dalej {
+            position: absolute;
+                display: flexbox;
+                left: 87%;
+                top: 150%;
+                background-color:red;
+                width: 12%;
+                height: 12%;
+                transition: 1s;
+                color: black;
+                color: black;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           }
+           .przycisk #dalej:hover {
+            background-color:darkgoldenrod;
+           color: white;
+           box-shadow: 5px 10px 18px green;
+           }
+            @font-face {
+        font-family: Font;
+   src: url(FCSSCNapoli20182019.woff);
+           }
+        </style>
+        <div class="zdjecie1">
+            <img src="pessi.jpg" id="pessi">
+        </div>
+        <div class="zdjecie2">
+            <img src="sewy.jpg" id="sewy">
+        </div>
+        <div class="zdjecie3">
+            <img src="man.jpg" id="man">
+        </div>
+        <div class="wybuch1">
+            <img src="explosion.png" id="ex">
+        </div>
+        <div class="wybuch2">
+            <img src="explosion.png" id="exo">
+        </div>
+        <div class="wybuch3">
+            <img src="explosion.png" id="exop">
+        </div>
+        <div class="box">
+        <h1 id="one">Krotki opis zawodnika</h1>
+        <p>
+         Cristiano Ronaldo urodzil sie 5 lutego 1985 roku na Madeirze <br>
+         Z zawodu jest pilkarzem i gral w takich klubach jak: Sporting Lizbona (2001-2003), <br>
+         Manchester United(2003-2009), Real Madryt (2009-2018), Juventus Turyn(2018-2021), <br>
+         ponownie Manchester United (2021-2022), i obecnie Al Nassr (2022-), i wystapil juz ponad 120 <br>
+         razy w reprezentacji Portugalii <br>
+        </p>
+        </div>
+        <div class="box2">
+            <h2 id="two">Przykladowe rekordy</h2>
+            <p>
+                Najskuteczniejszy zawodnik w historii reprezentacji Portugalii: 118 goli<br>
+                Najskuteczniejszy zawodnik w historii reprezentacji narodowych: 118 goli<br>
+                Najskuteczniejszy zawodnik w historii seniorskiej pilki noznej: 827 goli<br>
+                Najskuteczniejszy zawodnik w historii Realu Madryt: 450 goli<br>
+                Najskuteczniejszy zawodnik w historii Ligi Mistrzow UEFA: 140 goli<br>
+            </p>
+        </div>
+        <div class="box3">
+            <h3 id="three">Dlaczego nie Messi?</h3>
+            <p>
+                Messi tez jest dobry ale jest nie jest porownywalny do pana z Portugalii <br>
+                Messi jest bez formy nie patrzac na Mistrzostwa Swiata, ktore powinien wygrac francuski zolw Mekambe <br>
+                Gdyby nie cienki bramkarz puchar bylby znowu w Paryzu<br>
+                Przypomne tez Messi nie strzelil gola przeciwko Polsce na Mistrzostwach a Wojtek obronil karnego <br>
+            </p>
+        </div>
+        <div class="przycisk">
+            <a href="third_page.html" target="_blank">
+                <button id="wczesniej">Przejdź wcześniej</button>
+            </a>
+            <a href="glowne.html" target="_blank">
+                <button id="dalej">Przejdz na początek</button>
+            </a>
+        </div>
+    </body>
 </html>
