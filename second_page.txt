@@ -337,7 +337,60 @@
            color: white;
            box-shadow: 5px 10px 18px green;
            }
-           
+            @media only screen and (max-width:800px) {
+            .zdjecie1 {
+               width: 30%;
+               height: 25%;
+               left: 0%;
+            }
+            .zdjecie2  {
+               width: 30%;
+               height: 25%;
+               left: 50%;
+            }
+            .zdjecie3 {
+               width: 30%;
+               height: 25%;
+               left: 50%;
+            }
+            .zdjecie4 {
+               width: 30%;
+               height: 25%;
+               left: 0%;
+            }
+            .zdjecie5 {
+               width: 30%;
+               height: 25%;
+               left: 0%;
+            }
+            .zdjecie6 {
+               width: 30%;
+               height: 25%;
+               left: 50%;
+            }
+            .zdjecie7 {
+               width: 30%;
+               height: 25%;
+               left: 0%;
+            }
+            .zdjecie8 {
+               width: 30%;
+               height: 25%;
+               left: 50%;
+            }
+            .box {
+               left: 25%;
+            }
+            .box2 {
+               left: 25%;
+            }
+            .box3 {
+               left: 25%;
+            }
+            .przyciski #nastepne {
+               left: 78%;
+            }
+           }
         </style>
         <script>
             var audio = document.getElementById("bgAudio");
