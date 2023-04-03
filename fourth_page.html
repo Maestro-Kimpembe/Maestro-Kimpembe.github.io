@@ -16,6 +16,7 @@
                 background-position: center, center 100%;
                 background-attachment: fixed, fixed;
                 transition: background-position 0.5s ease-in-out;
+                overflow-x: hidden;
             }
             .box {
             border-radius: 16px;
@@ -299,6 +300,25 @@
             @font-face {
         font-family: Font;
    src: url(FCSSCNapoli20182019.woff);
+           }
+           @media only screen and (max-width:800px) {
+            .przycisk #wczesniej {
+                width: 23%;
+                left: 3%;
+            }
+            .przycisk #dalej {
+                width: 23%;
+                left: 82%;
+            }
+            .box {
+                font-size: 8px;
+            }
+            .box2 {
+                font-size: 8px;
+            }
+            .box3 {
+                font-size: 8px;
+            }
            }
         </style>
         <div class="zdjecie1">
