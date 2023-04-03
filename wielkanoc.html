@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kartka wielkanocna</title>
+        <link rel="shortcut icon" href="zajac.jpg">
+    </head>
+    <body>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-image: url(tlo1.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            @font-face {
+        font-family: Font;
+   src: url(Egg\ Hunter.ttf); 
+            }
+            .box {
+                position: absolute;
+                width: 55%;
+                height: 55%;
+                top: 20%;
+                left: 20%;
+                background-color: rgba(46, 139, 87,0.8);
+                margin: 0 50px;
+                border-radius: 16px;
+                color: black;
+            }
+            .box #wesolego {
+                text-align: center;
+                font-family: Font;
+                font-size: 26px;
+                color: black;
+                font-style: italic;
+                text-decoration: underline black;
+            }
+            .box .left {
+                width: 50%;
+                border-right: 5px dashed black ;
+                border-style: dashed;
+                height: 82.8%;
+                border-left: none;
+                border-top: none;
+                border-bottom: none;
+                top: 1%;
+            }
+            p {
+                font-family: Font;
+                font-size: 20px;
+                color: black;
+                font-weight: bold;
+            }
+            .box .right {
+              width: 50%;
+              height: 40%;
+              font-family: Font;
+              color: black;
+            }
+            #input1 {
+                position: absolute;
+                top: 25%;
+                left: 53%;
+                font-family: Font;
+                font-size: 23px;
+                width: 35%;
+                background: none;
+                cursor: pointer;
+                color: black;
+                border: none;
+                font-weight: bolder;
+                border-top:none ;
+                border-left:none ;
+                border-right:none ;
+                padding: 5px;
+                
+            }
+            #input2 {
+                position: absolute;
+                top: 35%;
+                left: 53%;
+                font-family: Font;
+                font-size: 23px;
+                width: 35%;
+                background: none;
+                cursor: pointer;
+                color: black;
+                font-weight: bolder;
+                display: block;
+                background: none ;
+                border-bottom: 5px gray;
+                border-radius: 7px;
+                border-top:none ;
+                border-left:none ;
+                border-right:none ;
+                padding: 5px;
+            }
+            input {
+                background-color: whitesmoke;
+            }
+            ::placeholder {
+                color: black;
+            }
+             iframe {
+                position: absolute;
+                cursor: pointer;
+                top: 60%;
+                left: 50%;
+            }
+            .down {
+                position: absolute;
+                left: 50%;
+                top: 55%;
+                border-top: 5px dashed black ;
+                border-style: dashed;
+                width: 49.5%;
+                height: 30%;
+                border-right: none;
+                border-left: none;
+                border-bottom: none;
+                justify-content: center;
+            }
+        </style>
+      <div class="box">
+        <h1 id="wesolego">Wesolego jajka zyczy klasa 1TP</h1>
+        <div class="left">
+            <p>
+            Cala klasa zyczy pani Wesolych Swiat Wielkanocnych <br>
+            Swieta Wielkanocne to czas radosci, nadziei i odradzania sie zycia. <br>
+            Z tej okazji zyczymy Pani, aby ten czas przyniosl wiele usmiechu <br>
+            i ciepla w Pani sercu. Niech Wielkanocna niedziela przyniesie Pani wiele <br>
+            Zyczymy Pani, aby nadchodzace wiosenne dni, byly pelne wiosennego blasku i radosci <br>
+             a takze, zeby kazdy kolejny dzien obfitowal w inspirujace wyzwania <br>
+            </p>
+
+        </div>
+        <div class="right">
+         <input type="text" id="input1" name="input" placeholder="OD:Klasa 1TP" readonly>
+         <input type="text " id="input2" name="input" placeholder="DO:Pani Sokolowskiej Renaty">
+        </div>
+        <div class="down">
+        </div>
+        <iframe src="https://giphy.com/embed/Jp4AeXEbzs6KNN7hAf" width="50%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      </div>
+    </body>
+</html>
