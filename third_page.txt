@@ -57,6 +57,14 @@
            color: white;
            box-shadow: 5px 10px 18px green;
            }
+           @media only screen and (max-width:800px) {
+            iframe {
+                width: 100%;
+            }
+            #nastepne {
+                left: 83%;
+            }
+           }
  </style>
         <iframe width="99%" height="83.5%" src="https://www.youtube.com/embed/9-5KyjC5K-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <a href="second_page.html" target="_blank">
