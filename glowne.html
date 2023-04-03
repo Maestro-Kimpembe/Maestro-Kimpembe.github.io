@@ -3,6 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Główne menu</title>
         <link rel="shortcut icon" href="wc.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <style>
         body {
@@ -282,6 +283,8 @@
         animation-iteration-count: infinite;
         display: flexbox;
     }
+    
+    
      #dwa {
         width: 260px;
         height: 170px;
@@ -319,18 +322,53 @@
         right: 0;
         
     }
-        @media only screen and (min-width:800px) {
-        .burgeros {
-            display: none;
-        }
-        ul {
-            display: none;
-        }
-        nav {
-            display: none;
-        }
-    }
-    @media only screen and (max-width:800px)  {
+    .mobile-container {
+  margin: auto;
+  background-color: transparent;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 93%;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: darkgoldenrod;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.icon {
+  float: right;
+  background-color: black;
+  height: 5%;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+  display: none;
+}
+@media only screen and (max-width:800px)  {
         .przyciski {
             display: none;
         }
@@ -358,68 +396,91 @@
         .arrow #arr {
             left: 37%;
         }
+        #r {
+            display: none;
+        }
+        #t {
+            display: none;
+        }
+        #u {
+            display: none;
+        }
+        #y {
+            display: none;
+        }
+    }
+    @media only screen and (min-width:800px)  {
+        .mobile-container {
+            display: none;
+        }
     }
     </style>
-    <script>
-        var audio = document.getElementById("bgAudio");
-            audio.volume = 1;
-            function m() {
-        if (document.getElementById("inc").src == "inc.png"){
-        document.getElementById("inc").src = "inc2.png";
-    } else {
-        document.getElementById("inc").src = "inc2.png";
-    }
-}
-        const mobileNav = document.querySelector('ul');
-const burgerosIcon = document.querySelector('burgeros');
-burgerosIcon.addEventListener('click',function(){
-    burgerosIcon.classList.toggle('active');
-    mobileNav.classList.toggle('active');
-})
-    </script>
     <body>
-        
-        <div class="przyciski">
-            <a href="second_page.html" target="_blank">
-                <button id="q">Zasady gry</button>
-            </a>
-            <a href="third_page.html" target="_blank">
-                <button id="w">Filmik</button>
-            </a>
-            <a href="fourth_page.html" target="_blank">
-                <button id="e">Ulubiony gracz</button>
-            </a>
+    <script>
+        function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+    </script>
+    <div class="przyciski">
+        <a href="second_page.html" target="_blank">
+            <button id="q">Zasady gry</button>
+        </a>
+        <a href="third_page.html" target="_blank">
+            <button id="w">Filmik</button>
+        </a>
+        <a href="fourth_page.html" target="_blank">
+            <button id="e">Ulubiony gracz</button>
+        </a>
+    </div>
+    <div class="trawa">
+        <div class="mobile-container">
+            <div class="topnav">
+                <a href="#home" class="active">Logo</a>
+                <div id="myLinks">
+                  <a href="second_page.html">Zasady</a>
+                  <a href="third_page.html">Filmik</a>
+                  <a href="fourth_page.html">Gracz</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
         </div>
-        <div class="trawa">
-            <a href="second_page.txt" target="_blank">
-                <button id="r">Kod pierwszej strony</button>
-            </a>
-            <a href="third_page.txt" target="_blank">
-                <button id="t">Kod drugiej strony</button>
-            </a>
-            <a href="fourth_page.txt" target="_blank">
-                <button id="y">Kod trzeciej strony</button>
-            </a>
-            <a href="glowne.txt" target="_blank">
-                <button id="u">Kod obecnej strony</button>
-            </a>
-            <div class="tlo"></div>
-            <div class="boxik">
-                <img id="jeden" src="cze.jpg">
-                <img id="dwa" src="fajne.PNG">
-            </div>
-            <div class="incredible">
-                <img id="inc" src="inc.png">
-                <img id="inc2" src="inc2.png">
-            </div>
-            <div class="arrow">
-                <img id="arr" src="arr.png">
-            </div>
-            <div class="naglowek">
-                <p id="ha">Moja najszczersza reakcja</p>
-            </div>
         </div>
-        <audio autoplay loop id="bgAudio">
-            <source src="ok.mp3">
-    </body>
+        <a href="second_page.txt" target="_blank">
+            <button id="r">Kod pierwszej strony</button>
+        </a>
+        <a href="third_page.txt" target="_blank">
+            <button id="t">Kod drugiej strony</button>
+        </a>
+        <a href="fourth_page.txt" target="_blank">
+            <button id="y">Kod trzeciej strony</button>
+        </a>
+        <a href="glowne.txt" target="_blank">
+            <button id="u">Kod obecnej strony</button>
+        </a>
+        <div class="tlo"></div>
+        <div class="boxik">
+            <img id="jeden" src="cze.jpg">
+            <img id="dwa" src="fajne.PNG">
+        </div>
+        <div class="incredible">
+            <img id="inc" src="inc.png">
+            <img id="inc2" src="inc2.png">
+        </div>
+        <div class="arrow">
+            <img id="arr" src="arr.png">
+        </div>
+        <div class="naglowek">
+            <p id="ha">Moja najszczersza reakcja</p>
+        </div>
+    </div>
+    <audio autoplay loop id="bgAudio">
+        <source src="ok.mp3">
+    </div>
+</body>
 </html>
