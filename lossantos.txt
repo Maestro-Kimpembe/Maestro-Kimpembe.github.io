@@ -1,0 +1,452 @@
+<html>
+    <head>
+        <title>Witamy w Los Santos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="hakjer.png">
+        <script src="https://kit.fontawesome.com/36854569a6.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: 101% 101%;
+                overflow-x: hidden;
+                
+            }
+            @font-face {
+        font-family: Font;
+   src: url(pricedow.ttf); 
+        }
+        @font-face {
+        font-family: Font1;
+   src: url(JosefinSans-Italic-VariableFont_wght.ttf); 
+        }
+            #tlo {
+                position: fixed;
+                min-width: 100%;
+                min-height: 100%;
+                right: 0;
+                bottom: 0;
+            }
+           .przyciski {
+            position: fixed;
+            top: 80%;
+            width: 100%;
+           }
+           #pierwszy {
+            position: fixed;
+            width: 20%;
+            top: 83%;
+            left: 0%;
+            height: 16%;
+            font-size: 45px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            background-color: red;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            font-family:Font ;
+            clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+           }
+           #drugi {
+            position: fixed;
+            width: 20%;
+            top: 83%;
+            left: 80%;
+            height: 16%;
+            font-size: 45px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            background-color: red;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            font-family:Font ;
+            clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+           }
+           #drugi:hover {
+            color: black;
+           }
+           #pierwszy:hover {
+            color: black;
+           }
+           .rozwin1 {
+            position: absolute;
+            right: 0%;
+            top: 13%;
+            left: 6%;
+            bottom: 0%;
+            background-color: red;
+            width: 5%;
+            height: 7%;
+            margin: 0 50px;
+            border-radius: 16px;
+            border: 8px solid black;
+           }
+           ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+           .box {
+            left: 2%;
+            font-weight: bold;
+            width: 104%;
+            height: 100%;
+            font-size: 49px;
+           text-align: left;
+            border-right: 7px solid black;
+            border-bottom: 5px solid black;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+           }
+           .rozwin1:hover {
+           width: 31%;
+           height: 30%;
+           background-image: url(frank.png);
+           background-repeat: no-repeat;
+            background-size: 100% 100%;
+           }
+           .rozwin1:hover .box {
+            background:red;
+           }
+           #rer {
+            position: absolute;
+            font-size: 45px;
+            margin-left: 18px;
+           }
+           #pierwsze {
+            position: absolute;
+            font-size: 24px;
+            font-family: monospace;
+            letter-spacing: 3px;
+            visibility: hidden;
+            left: 15%;
+           }
+           .rozwin1:hover #pierwsze {
+            visibility: visible;
+           }
+           #paragraf {
+            position: absolute;
+            font-size: 23px;
+            font-family: Font1;
+            font-weight: bolder;
+            text-indent: 1px;
+            top: 12%;
+            visibility: hidden;
+            color: red
+           }
+           .rozwin1:hover #paragraf {
+            visibility: visible;
+           }.rozwin2 {
+            position: absolute;
+            right: 0%;
+            top: 53%;
+            left: 36%;
+            bottom: 0%;
+            background-color: red;
+            width: 5%;
+            height: 7%;
+            margin: 0 50px;
+            border-radius: 16px;
+            border: 8px solid black;
+           }.rozwin2:hover {
+            width: 31%;
+           height: 30%;
+           background-image: url(mic.png);
+           background-repeat: no-repeat;
+            background-size: 100% 100%;
+           }
+           #drugie {
+            position: absolute;
+            font-size: 24px;
+            font-family: monospace;
+            letter-spacing: 3px;
+            visibility: hidden;
+            left: 15%;
+           }
+           .rozwin2:hover #drugie {
+            visibility: visible;
+           }
+           #paragraf2 {
+            position: absolute;
+            font-size: 23px;
+            font-family: Font1;
+            font-weight: bolder;
+            text-indent: 1px;
+            top: 12%;
+            visibility: hidden;
+            color: red
+           }
+           .rozwin2:hover #paragraf2 {
+            visibility: visible;
+           }
+           .rozwin3 {
+            position: absolute;
+            right: 0%;
+            top: 20%;
+            left: 66%;
+            bottom: 0%;
+            background-color: red;
+            width: 5%;
+            height: 7%;
+            margin: 0 50px;
+            border-radius: 16px;
+            border: 8px solid black;
+           }
+           .rozwin3:hover {
+            width: 31%;
+           height: 30%;
+           background-image: url(trevp.jpg);
+           background-repeat: no-repeat;
+            background-size: 100% 100%;
+           }
+           #trzecie {
+            position: absolute;
+            font-size: 24px;
+            font-family: monospace;
+            letter-spacing: 3px;
+            visibility: hidden;
+            left: 15%;
+           }
+           .rozwin3:hover #trzecie {
+            visibility: visible;
+           }
+            #paragraf3 {
+                position: absolute;
+            font-size: 23px;
+            font-family: Font1;
+            font-weight: bolder;
+            text-indent: 1px;
+            top: 12%;
+            visibility: hidden;
+            color: red  
+            }
+            .rozwin3:hover #paragraf3 {
+                visibility: visible;
+            }
+            .strzala {
+                position: absolute;
+                width: 111%;
+                height: 101%;
+                background-color: black;
+                left: 130%;
+                top: 0%;
+                bottom: 0%;
+                clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+                animation-duration: 1s;
+                animation-name: strzala;
+                animation-iteration-count: infinite;
+            }
+            .strzala2 {
+                position: absolute;
+                width: 111%;
+                height: 101%;
+                background-color: black;
+                left: 130%;
+                top: 0%;
+                bottom: 0%;
+                clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+                animation-duration: 1s;
+                animation-name: strzala;
+                animation-iteration-count: infinite; 
+            }
+            @keyframes strzala {
+                0%
+                 {transform: scale(1);}
+                 25% {
+                    transform: scale(1.2);
+                 }
+                 50% {
+                    transform: scale(1.4);
+                 }
+                 75% {
+                    transform: scale(1.2);
+                 }
+                 100% {
+                    transform: scale(1);
+                 }
+            }
+            @keyframes niewid {
+                0% {visibility: hidden;}
+                100% {visibility: hidden;}
+            }
+            .rozwin1:hover .strzala {
+               visibility: hidden;
+            }
+            .rozwin2:hover .strzala2 {
+                visibility: hidden;
+            }
+            .strzala3 {
+                position: absolute;
+                width: 111%;
+                height: 101%;
+                background-color: black;
+                left: 130%;
+                top: 0%;
+                bottom: 0%;
+                clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+                animation-duration: 1s;
+                animation-name: strzala;
+                animation-iteration-count: infinite; 
+            }
+            .rozwin3:hover .strzala3 {
+                visibility: hidden;
+            }
+            #btn1 {
+            position: absolute;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            width: 14%;
+            height: 13%;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+            left: 28%;
+            background-color: black;
+            top: 0%;
+            }
+            #btn2 {
+                position: absolute;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            width: 14%;
+            height: 13%;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+            left: 42%;
+            background-color: black;
+            top: 0%;  
+            }
+            #btn3 {
+            position: absolute;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            width: 14%;
+            height: 13%;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+            left: 56%;
+            background-color: black;
+            top: 0%;  
+            }
+            #btn1:hover {
+            background-image: url(hakjer.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            }
+            #btn2:hover {
+            background-image: url(cod2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            }
+            #btn3:hover {
+            background-image: url(cod.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            }
+             </style>
+        <video id="tlo" autoplay loop muted>
+ <source src="dre2.mp4" type="video/mp4">
+        </video>
+   <a href="skorupa.html" target="_blank">
+    <div class="przyciski">
+    <button id="pierwszy" class="btn1">Strona w tył</button>
+   </a>
+   <a href="vicecity.html" target="_blank">
+    <button id="drugi">Strona w przód</button>
+   </a>
+</div>
+<div class="rozwin1">
+    <i id="rer" class="fa-solid fa-user"></i>
+    <h1 id="pierwsze">Poznaj Franklina Clintona</h1>
+    <p id="paragraf">
+        Mimo mieszkania w dzielnicy słynącej z <br> przestępstw i wojen gangów
+        Franklinowi udało się wyjść na prostą i osiągnąć coś w życiu<br>
+        Oczywiście zrobił to kradnąc i zabijajac kilku ludzi<br> ale liczy
+        sie efekt końcowy<br>
+    </p>
+    <div class="strzala"></div>
+</div>
+<div class="rozwin2">
+    <i id="rer" class="fa-solid fa-user"></i>
+    <h2 id="drugie">Poznaj Micheala de Sante</h2>
+    <p id="paragraf2">
+     Stary złoczynca, któy porzucił najlpeszwgo <br> przyjaciela
+     Dla lepszego życia dla siebie i swojej <br> rodziny
+     Mimo tego poświecenia i tak wrócił na <br> scieżke
+     przestępczości<br>
+    </p>
+    <div class="strzala2"></div>
+</div>
+<div class="rozwin3">
+    <i id="rer" class="fa-solid fa-user"></i>
+    <h3 id="trzecie">Poznaj Trevora Phillipsa</h3>
+    <p id="paragraf3">
+        Niezbyt dobrze opanowana osoba pod wzgledem<br>
+        psychicznym ale dla przyjaciół jest bardzo<br>
+        przydatny w szczególności w napadach oraz<br>
+        masowych zbrodniach<br>
+    </p>
+    <div class="strzala3"></div>
+</div>
+<div class="przycisk1">
+    <a href="lossantos.txt" target="_blank">
+        <button id="btn1">Kod do tej strony</button>
+    </a>
+</div>
+<div class="przycisk2">
+    <a href="vicecity.txt" target="_blank">
+        <button id="btn2">Kod do następnej strony</button>
+    </a>
+</div>
+<div class="przycisk3">
+    <a href="libertycity.txt" target="_blank">
+        <button id="btn3">Kod do ostatniej strony</button>
+    </a>
+</div>
+<script>
+    var audio = document.getElementById("bgAudio");
+    audio.volume = 0.9;
+</script>
+<audio autoplay loop id="bgAudio">
+    <source src="theme.mp3">
+    </body>
+</html>

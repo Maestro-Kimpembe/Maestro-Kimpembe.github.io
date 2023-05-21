@@ -1,0 +1,460 @@
+<html>
+    <head>
+        <title>Witamy w Vice City</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="hakjer.png">
+        <script src="https://kit.fontawesome.com/36854569a6.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: 101% 101%;
+                overflow-x: hidden;
+            }
+            @font-face {
+        font-family: Font;
+   src: url(pricedow.ttf); 
+        }
+        @font-face {
+        font-family: Font1;
+   src: url(JosefinSans-Italic-VariableFont_wght.ttf); 
+        }
+        #tlo {
+                position: fixed;
+                min-width: 100%;
+                min-height: 100%;
+                right: 0;
+                bottom: 0;
+            }
+    ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .przyciski {
+    position: fixed;
+    top: 80%;
+    width: 100%;
+      }
+      #pierwszy {
+        position: fixed;
+        width: 20%;
+        top: 83%;
+        left: 0%;
+        height: 16%;
+        font-size: 45px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        background-color: red;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        align-items: center;
+        transition: 0.5s;
+        font-family:Font ;
+        clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+      }
+      #drugi {
+        position: fixed;
+        width: 20%;
+        top: 83%;
+        left: 80%;
+        height: 16%;
+        font-size: 45px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        background-color: red;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        align-items: center;
+        transition: 0.5s;
+        font-family:Font ;
+        clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+      }
+      #btn1 {
+        position: absolute;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+        background-color: black;
+        color: white;
+        align-items: center;
+        transition: 0.5s;
+        width: 14%;
+        height: 13%;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 26px;
+        letter-spacing: 2px;
+        font-family: monospace;
+        left: 30%;
+        background-color: black;
+        top: 0%;
+      }
+      #btn2 {
+        position: absolute;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+        background-color: black;
+        color: white;
+        align-items: center;
+        transition: 0.5s;
+        width: 14%;
+        height: 13%;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 26px;
+        letter-spacing: 2px;
+        font-family: monospace;
+        left: 44%;
+        background-color: black;
+        top: 0%;  
+      }
+      #btn3 {
+        position: absolute;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+        background-color: black;
+        color: white;
+        align-items: center;
+        transition: 0.5s;
+        width: 14%;
+        height: 13%;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 26px;
+        letter-spacing: 2px;
+        font-family: monospace;
+        left: 58%;
+        background-color: black;
+        top: 0%;  
+      }
+      #btn1:hover {
+        background-image: url(hakjer.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      #btn2:hover {
+        background-image: url(cod2.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      #btn3:hover {
+        background-image: url(cod.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .box1 {
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        margin: 0 50px;
+        border-radius: 16px;
+        background-image: url(ok2.png);
+        border: 5px solid black;
+        top: 16%;
+        left: 10%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .box1:hover {
+        animation-name: postrzal;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transition: 0.5s ease-in-out;
+      }
+      @keyframes postrzal {
+        0% {
+          background-image: url(ok2.png);
+        }
+        50% {
+          background-image: url(ok4.png);
+        }
+        100% {
+          background-image: url(ok5.png);
+        }
+      }
+       #pod {
+        text-align: center;
+        font-family: Font1;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10%;
+       }
+       #pod1 {
+        font-size: 18px;
+        position: absolute;
+        font-weight: bold;
+        font-family: Font1;
+        text-indent: 2px;
+        color: black;
+        top: 20%;
+       }
+       .box2 {
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        margin: 0 50px;
+        border-radius: 16px;
+        background-image: url(ok2.png);
+        border: 5px solid black;
+        top: 56%;
+        left: 10%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+       }
+       .box2:hover {
+        animation-name: postrzal;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transition: 0.5s ease-in-out;
+       }
+       #wyp {
+        text-align: center;
+        font-family: Font1;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10%;
+       }
+       #pod2 {
+        font-size: 18px;
+        position: absolute;
+        font-weight: bold;
+        font-family: Font1;
+        text-indent: 2px;
+        color: black;
+        top: 20%;
+       }
+       .box3 {
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        margin: 0 50px;
+        border-radius: 16px;
+        background-image: url(ok2.png);
+        border: 5px solid black;
+        top: 16%;
+        left: 56%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+       }
+       .box3:hover {
+        animation-name: postrzal;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transition: 0.5s ease-in-out;
+       }
+       #pod3 {
+        text-align: center;
+        font-family: Font1;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10%;
+       }
+       #siu {
+        font-size: 17px;
+        position: absolute;
+        font-weight: bold;
+        font-family: Font1;
+        text-indent: 2px;
+        color: black;
+        top: 20%;
+       }
+       .box4 {
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        margin: 0 50px;
+        border-radius: 16px;
+        background-image: url(ok2.png);
+        border: 5px solid black;
+        top: 56%;
+        left: 56%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+       }
+       .box4:hover {
+        animation-name: postrzal;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transition: 0.5s ease-in-out;
+       }
+       #kon {
+        text-align: center;
+        font-family: Font1;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10%;
+       }
+       #kon1 {
+        font-size: 17px;
+        position: absolute;
+        font-weight: bold;
+        font-family: Font1;
+        text-indent: 2px;
+        color: black;
+        top: 20%;
+       }
+       .box5 {
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        left: 15%;
+        top: 34%;
+        margin: 0 50px;
+        border: 5px solid black;
+        border-radius: 16px;
+        background-image: url(og.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity: .5;
+       }
+       .box6 {
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        left: 52%;
+        top: 34%;
+        margin: 0 50px;
+        border: 5px solid black;
+        border-radius: 16px;
+        background-image: url(og1.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity: .5;
+       }
+       @keyframes zloty {
+        0% {
+          border: black 5px solid;
+        }
+        20% {
+          border: gold 8px solid;
+          opacity: .6;
+        }
+        40% {
+          border: black 5px solid;
+        }
+        50% {
+          border: gold 8px solid;
+          opacity: .7;
+        }
+        60% {
+          border: gold 8px solid;
+        }
+        70% {
+          border: black 5px solid;
+          opacity: .6;
+        }
+        80% {
+          border: gold 8px solid;
+        }
+        90% {
+          border: gold 8px solid;
+          opacity: .6;
+        }
+        100% {
+          border: gold 8px solid;
+          opacity: .5;
+        }
+       }
+       .box5:hover {
+        animation-name: zloty;
+        animation-iteration-count: infinite;
+        animation-duration: 3.2s;
+       }
+       .box6:hover {
+        animation-name: zloty;
+        animation-iteration-count: infinite;
+        animation-duration: 3.2s;
+       }
+       #pierwszy:hover {
+        color: black;
+       }
+       #drugi:hover {
+        color: black;
+       }
+        </style>
+         <video id="tlo" autoplay loop muted>
+            <source src="dre4.mp4" type="video/mp4">
+            </video>
+            <div class="przyciski">
+                <a href="lossantos.html" target="_blank">
+                    <button id="pierwszy">Strona w tył</button>
+                </a>
+                <a href="libertycity.html" target="_blank">
+                    <button id="drugi">Strona w przód</button>
+                </a>
+            </div>
+            <div class="przycisk1">
+                <a href="lossantos.txt">
+                    <button id="btn1">Kod poprzedniej strony</button>
+                </a>
+            </div>
+            <div class="przycisk2">
+                <a href="vicecity.txt">
+                    <button id="btn2">Kod obecnej strony</button>
+                </a>
+            </div>
+            <div class="przycisk3">
+                <a href="libertycity.txt">
+                    <button id="btn3">Kod następnej strony</button>
+                </a>
+            </div>
+            <div class="box1">
+            <h1 id="pod">Podstawowe informacje</h1>
+            <p id="pod1">
+              Vice City jest miastem wzorowanym na<br>
+              amerykańskim mieście Miami położonym<br>
+              w stanie Floryda. Jest ono słoneczynym<br>
+              i pełnym przestępców miastem<br>
+            </p>
+            </div>
+            <div class="box2">
+            <h1 id="wyp">Główny bohater</h1>
+            <p id="pod2">
+              Jest nim Tommy Vercetti, który jest<br>
+              wyjątkowo znany ze swojej klasycznej<br>
+              idealnie pasującej do klimatu koszuli<br>
+              Tak samo jak każdy bohater z serii jest<br>
+              on przestępcą<br>
+            </p>
+            </div>
+            <div class="box3">
+            <h1 id="pod3">Krótka historia</h1>
+            <p id="siu">
+              Głównym bohaterem jest Tommy Vercetti, członek mafii
+               Forellich który został wypuszczony <br> z więzienia 
+               po piętnastu latach odsiadki. Został zamieszany
+               w transakcję narkotykową niespodziewanie 
+                przerwaną przez nieznanych sprawców.<br>
+            </p>
+            </div>
+            <div class="box4">
+            <h1 id="kon">Dodatkowe</h1>
+            <p id="kon1">
+            Patrząc całościowo Vice City jest
+            miastem,które mimo wysokiej
+            przestępczości jest warte odwiedzenia
+            ze względu na klimat i widoki w mieście
+            </p>
+            </div>
+            <div class="box5">
+            </div>
+            <div class="box6">
+
+            </div>
+    </body>
+</html>

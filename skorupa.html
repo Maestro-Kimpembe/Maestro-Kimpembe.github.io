@@ -1,0 +1,797 @@
+<html>
+    <head>
+        <title>Coś czego się nauczyłem znaczy powinienem</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="hakjer.png">
+    </head>
+    <body>
+        <style>
+            html {
+                width: 100%;
+            }
+            h1 {
+                font-size: 56px;
+                text-align: left;
+                font-weight: bold;
+                font-family: Font;
+                color: black;
+                box-shadow: 1% gray;
+            }
+            body {
+                background-image: url(plaza.jpg);
+                width: 100%;
+                height: 100%;
+                font-family: Font;
+                background-repeat: no-repeat;
+                background-size: 101% 101%;
+                overflow-x: hidden;
+            }
+            @font-face {
+        font-family: Font;
+   src: url(EndlessSummerPersonalUseRegular-ywp3d.ttf); 
+        }
+        .slowka #one {
+            position: absolute;
+            font-family: Font;
+            font-size: 40px;
+            left: 14%;
+            top: 30%;
+            bottom: 0%;
+            right: 0%;
+            color:black;
+        }
+        .slowka #two {
+            position: absolute;
+            font-family: Font;
+            font-size: 40px;
+            left: 63%;
+            top: 30%;
+            bottom: 0%;
+            right: 0%;
+            color: black;
+        }
+        .film iframe {
+            position: absolute;
+            left: 10%;
+            right: 0%;
+            top: 43%;
+            bottom: 0%;
+            
+        }
+        .film2 iframe  {
+         position: absolute;
+         left: 60%;
+         right: 0%;
+         bottom: 0%;
+         top: 43%;
+        }
+        .kontener {
+            position: absolute;
+            background-image: url(beach.jpg);
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            right: 0%;
+            width: 30%;
+            height: 31.6%;
+            text-align: left;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: lightseagreen;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+        .zaslan {
+            position: absolute;
+            width: 70%;
+            left: 30%;
+            background-color: black;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            height: 31.6%;
+        }
+        .main-content {
+            position: absolute;
+            width: 70%;
+            height: 30%;
+            right: 0%;
+            bottom: 0%;
+            left: 30%;
+            top: 0%;
+            background-repeat: no-repeat;
+            background: none;
+            font-family: monospace;
+            
+        }
+         #pierwszy {
+            position: absolute;
+            clip-path: polygon(20% 0%, 100% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 100%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            width: 34%;
+            height: 55%;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+        }
+         a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+        @keyframes pasek1 {
+        0% {
+            visibility: hidden;
+        }
+        20% {
+            visibility: visible; width: 50%;
+        }
+        40% {
+            visibility: visible; width: 100%;
+        }
+        60% {
+            visibility: hidden;
+        }
+        80% {
+            visibility: hidden;
+        }
+        100% {
+            visibility: hidden;
+        }
+    }
+    @keyframes pasek7 {
+        0% {
+            visibility: hidden;
+        }
+        20% {
+            visibility: visible; width: 50%;
+        }
+        40% {
+            visibility: visible; width: 100%;
+        }
+        60% {
+            visibility: hidden;
+        }
+        80% {
+            visibility: hidden;
+        }
+        100% {
+            visibility: hidden;
+        }
+    }
+        @keyframes pasek4 {
+        0% {
+            visibility: hidden;
+        }
+        20% {
+            visibility: visible; width: 50%;
+        }
+        40% {
+            visibility: visible; width: 100%;
+        }
+        60% {
+            visibility: hidden;
+        }
+        80% {
+            visibility: hidden;
+        }
+        100% {
+            visibility: hidden;
+        }
+    }
+    @keyframes pasek2 {
+        0% {
+            visibility: hidden;
+        }
+        20% {
+            visibility: hidden;
+        }
+        40% {
+            visibility: hidden;
+        }
+        50% {
+            visibility: visible; width: 50%;
+        }
+        70% {
+            visibility: visible; width: 100%;
+        }
+        80% {
+            visibility: hidden;
+        }
+        100% {
+            visibility: hidden;
+        }
+    }
+    @keyframes pasek5 {
+        0% {
+            visibility: hidden;
+        }
+        20% {
+            visibility: hidden;
+        }
+        40% {
+            visibility: hidden;
+        }
+        50% {
+            visibility: visible; width: 50%;
+        }
+        70% {
+            visibility: visible; width: 100%;
+        }
+        80% {
+            visibility: hidden;
+        }
+        100% {
+            visibility: hidden;
+        }
+    }
+    @keyframes pasek8 {
+        0% {
+            visibility: hidden;
+        }
+        20% {
+            visibility: hidden;
+        }
+        40% {
+            visibility: hidden;
+        }
+        50% {
+            visibility: visible; width: 50%;
+        }
+        70% {
+            visibility: visible; width: 100%;
+        }
+        80% {
+            visibility: hidden;
+        }
+        100% {
+            visibility: hidden;
+        }
+    }
+    @keyframes pasek3 {
+        0% {
+            visibility: hidden;
+        }
+        20% {
+            visibility: hidden;
+        }
+        40% {
+            visibility: hidden;
+        }
+        50% {
+            visibility: hidden;
+        }
+        70% {
+            visibility: hidden;
+        }
+        80% {
+            visibility: visible; width: 50%;
+        }
+        90% {
+            visibility: visible; width: 100%;
+        }
+        100% {
+            visibility: hidden;
+        }
+    }
+    @keyframes pasek6 {
+        0% {
+            visibility: hidden;
+        }
+        20% {
+            visibility: hidden;
+        }
+        40% {
+            visibility: hidden;
+        }
+        50% {
+            visibility: hidden;
+        }
+        70% {
+            visibility: hidden;
+        }
+        80% {
+            visibility: visible; width: 50%;
+        }
+        90% {
+            visibility: visible; width: 100%;
+        }
+        100% {
+            visibility: hidden;
+        }
+    }
+    @keyframes pasek9 {
+        0% {
+            visibility: hidden;
+        }
+        20% {
+            visibility: hidden;
+        }
+        40% {
+            visibility: hidden;
+        }
+        50% {
+            visibility: hidden;
+        }
+        70% {
+            visibility: hidden;
+        }
+        80% {
+            visibility: visible; width: 50%;
+        }
+        90% {
+            visibility: visible; width: 100%;
+        }
+        100% {
+            visibility: hidden;
+        }
+    }
+         #pierwszy:hover {
+            cursor: pointer;
+            color: transparent;
+        }
+         #pierwszy:hover .pasek1 {
+            cursor: pointer;
+            animation-name: pasek1;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+        }
+        .pasek1 {
+            position: absolute;
+            background-image: url(pip.jpg);
+            background-repeat: no-repeat;
+            visibility: hidden;
+            width: 100%;
+            height: 65%;
+            left: 0%;
+            top: 40%;
+            clip-path: polygon(0 60%, 100% 62%, 79% 100%, 0% 100%);
+            
+        }
+        .pasek4 {
+            position: absolute;
+            background-image: url(vice.jpg);
+            background-repeat: no-repeat;
+            visibility: hidden;
+            width: 100%;
+            height: 65%;
+            left: 0%;
+            top: 40%;
+            clip-path: polygon(0 64%, 100% 65%, 100% 99%, 24% 100%);
+
+        }
+        #drugi {
+            position: absolute;
+            clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 88%, 80% 100%, 20% 100%, 0 79%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            width: 34%;
+            height: 55%;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+            left: 34%;
+        }
+        #drugi:hover {
+            cursor: pointer;
+            color: transparent;
+        }
+        #drugi:hover .pasek4 {
+            cursor: pointer;
+            animation-name: pasek4;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+        }
+        .pasek2 {
+            position: absolute;
+            background-image: url(sani.jpg);
+            background-repeat: no-repeat;
+            visibility: hidden;
+            width: 100%;
+            height: 60%;
+            left: 0%;
+            top: 20%;
+            clip-path: polygon(0 41%, 100% 42%, 100% 99%, 0 100%);
+
+        }
+        #pierwszy:hover .pasek2 {
+            cursor: pointer;
+            animation-name: pasek2;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+        }
+        .pasek5 {
+            position: absolute;
+            background-image: url(violet.jpg);
+            background-repeat: no-repeat;
+            visibility: hidden;
+            width: 100%;
+            height: 62%;
+            left: 0%;
+            top: 20%;
+            clip-path: polygon(0 41%, 100% 42%, 100% 99%, 0 100%);
+        }
+        #drugi:hover .pasek5 {
+            cursor: pointer;
+            animation-name: pasek5;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+        }
+        .pasek3 {
+            position: absolute;
+            background-image: url(grove.jpg);
+            background-repeat: no-repeat;
+            visibility: hidden;
+            width: 100%;
+            height: 77%;
+            left: 0%;
+            top: -33%;
+            clip-path: polygon(0 41%, 100% 42%, 100% 99%, 0 100%);
+        }
+        #pierwszy:hover .pasek3 {
+            cursor: pointer;
+            animation-name: pasek3;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+        }
+        .pasek6 {
+            position: absolute;
+            background-image: url(wall.jpg);
+            background-repeat: no-repeat;
+            visibility: hidden;
+            width: 100%;
+            height: 77%;
+            left: 0%;
+            top: -33%;
+            clip-path: polygon(0 41%, 100% 42%, 100% 99%, 0 100%);
+        }
+        #drugi:hover .pasek6 {
+            cursor: pointer;
+            animation-name: pasek6;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+        }
+        #trzeci {
+            position: absolute;
+            clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 100%, 80% 100%, 16% 100%, 0 88%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            width: 34%;
+            height: 55%;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+            left: 68%;
+        }
+        #trzeci:hover {
+            cursor: pointer;
+            color: transparent;
+        }
+        .pasek7 {
+            position: absolute;
+            background-image: url(libe.jpg);
+            background-repeat: no-repeat;
+            visibility: hidden;
+            width: 100%;
+            height: 65%;
+            left: 0%;
+            top: 40%;
+            clip-path: polygon(23% 75%, 76% 75%, 100% 75%, 100% 100%, 80% 100%, 16% 100%, 0 88%, 0 75%);
+        }
+        #trzeci:hover .pasek7 {
+            cursor: pointer;
+            animation-name: pasek7;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+        }
+        .pasek8 {
+            position: absolute;
+            background-image: url(niko.jpg);
+            background-repeat: no-repeat;
+            visibility: hidden;
+            width: 100%;
+            height: 65%;
+            left: 0%;
+            top: 25%;
+            clip-path: polygon(0 41%, 100% 42%, 100% 99%, 0 100%);
+        }
+        #trzeci:hover .pasek8 {
+            cursor: pointer;
+            animation-name: pasek8;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+        }
+        .pasek9 {
+            position: absolute;
+            background-image: url(gta4.jpg);
+            background-repeat: no-repeat;
+            visibility: hidden;
+            width: 100%;
+            height: 84%;
+            left: 0%;
+            top: -33%;
+            clip-path: polygon(0 41%, 100% 42%, 100% 99%, 0 100%);
+        }
+        #trzeci:hover .pasek9 {
+            cursor: pointer;
+            animation-name: pasek9;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+        }
+        #czwarty {
+        position: absolute;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            width: 34%;
+            height: 55.3%;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+            left: 0%;
+            background-color: black;
+            top: 50%;
+        }
+        #czwarty:hover {
+            background: url(cod.jpg);
+        }
+        #piaty {
+            position: absolute;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            width: 34%;
+            height: 55.3%;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+            left: 34%;
+            background-color: black;
+            top: 50%;
+        }
+        #piaty:hover {
+            background-image: url(cod2.jpg);
+        }
+        #szosty {
+            position: absolute;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            width: 34%;
+            height: 55.3%;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+            left: 68%;
+            background-color: black;
+            top: 50%;
+        }
+        #szosty:hover {
+            background-image: url(hakjer.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .stopka {
+            position: absolute;
+            width: 100%;
+            height: 20%;
+            top: 100%;
+            left: 0%;
+            bottom: 0%;
+            right: 0%;
+            background-color: black;
+        }
+        #siodmy {
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+            border-right: 5px whitesmoke solid;
+        }
+        #siodmy:hover {
+            background-image: url(ballin.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #osmy {
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            left: 25%;
+            top: 0%;
+            bottom: 0%;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+            border-right: 5px whitesmoke solid;
+        }
+        #osmy:hover {
+            background-image: url(week.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #dziewiaty {
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            left: 50%;
+            top: 0%;
+            bottom: 0%;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+            border-right: 5px whitesmoke solid;
+        }
+        #dziewiaty:hover {
+            background-image: url(szantusz.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #dziesiaty {
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            left: 75%;
+            top: 0%;
+            bottom: 0%;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+            background-color: black;
+            color: white;
+            align-items: center;
+            transition: 0.5s;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+            font-family: monospace;
+            border-right: 5px whitesmoke solid;
+        }
+        #dziesiaty:hover {
+            background-image: url(how.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        </style>
+        <div class="zaslan"></div>
+        <div class="kontener">
+        <h1>Moje wymarzone <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; wakacje!</h1>
+    </div>
+        <div class="slowka">
+        <p id="one">Wideło przykładowe:</p>
+        <p id="two">Wideło przykładowe:</p>
+    </div>
+    <div class="film">
+        <iframe id="one" width="29%" height="40%" src="https://www.youtube.com/embed/pZt3Nr3yYxw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="film2">
+        <iframe id="two" width="29%" height="40%" src="https://www.youtube.com/embed/RELDd2pGOjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="main-content">
+     <a href="lossantos.html" target="_blank">
+        <button class="btn" id="pierwszy">Druga strona
+            <div class="pasek1"></div>
+            <div class="pasek2"></div>
+            <div class="pasek3"></div>
+        </button>
+     </a>
+     <a href="vicecity.html" target="_blank">
+        <button class="btn2" id="drugi">Trzecia strona
+        <div class="pasek4"></div>
+        <div class="pasek5"></div>
+        <div class="pasek6"></div>
+        </button>
+     </a>
+     <a href="libertycity.html" target="_blank">
+        <button class="btn3" id="trzeci">Czwarta strona
+        <div class="pasek7"></div>
+        <div class="pasek8"></div>
+        <div class="pasek9"></div>
+        </button>
+     </a>
+     <a href="lossantos.txt" target="_blank">
+        <button class="btn4" id="czwarty">Kod do drugiej strony</button>
+     </a>
+     <a href="vicecity.txt" target="_blank">
+        <button class="btn5" id="piaty">Kod do trzeciej strony</button>
+     </a>
+     <a href="libertycity.txt" target="_blank">
+        <button class="btn6" id="szosty">Kod do ostatniej strony</button>
+     </a>
+    </div>
+    <div class="stopka">
+      <a href="https://youtu.be/e6w1zIta9E8">
+        <button class="btn7" id="siodmy" style="font-size: 25px;">Bonus 1</button>
+      </a>
+      <a href="https://youtu.be/9uoUbe220OE">
+        <button class="btn8" id="osmy" style="font-size: 25px;">Bonus 2</button>
+      </a>
+      <a href="https://youtu.be/POQzlZNGirc">
+        <button class="btn9" id="dziewiaty" style="font-size: 25px;">Bonus 3</button>
+      </a>
+      <a href="https://youtu.be/XbP9GgiYyPo">
+        <button class="btn10" id="dziesiaty" style="font-size: 25px;">Bonus 4</button>
+      </a>
+    </div>
+    </body>
+</html>
