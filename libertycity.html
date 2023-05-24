@@ -1,2 +1,384 @@
 <html>
+    <head>
+        <title>Witamy w Libery City</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="hakjer.png">
+        <script src="https://kit.fontawesome.com/36854569a6.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: 101% 101%;
+            overflow-x: hidden;
+            
+        }
+        @font-face {
+    font-family: Font;
+src: url(pricedow.ttf); 
+    }
+    @font-face {
+    font-family: Font1;
+src: url(JosefinSans-Italic-VariableFont_wght.ttf); 
+    }
+    #tlo {
+                position: fixed;
+                min-width: 100%;
+                min-height: 100%;
+                right: 0;
+                bottom: 0;
+            }
+    ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .przyciski {
+    position: fixed;
+    top: 80%;
+    width: 100%;
+      }
+      #pierwszy {
+        position: fixed;
+        width: 20%;
+        top: 83%;
+        left: 0%;
+        height: 16%;
+        font-size: 45px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        background-color: red;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        align-items: center;
+        transition: 0.5s;
+        font-family:Font ;
+        clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+      }
+      #drugi {
+        position: fixed;
+        width: 20%;
+        top: 83%;
+        left: 80%;
+        height: 16%;
+        font-size: 45px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        background-color: red;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        align-items: center;
+        transition: 0.5s;
+        font-family:Font ;
+        clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+      }
+      #pierwszy:hover {
+        color: black;
+      }
+      #drugi:hover {
+        color: black;
+      }
+      #btn1 {
+        position: absolute;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+        background-color: black;
+        color: white;
+        align-items: center;
+        transition: 0.5s;
+        width: 14%;
+        height: 13%;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 26px;
+        letter-spacing: 2px;
+        font-family: monospace;
+        left: 30%;
+        background-color: black;
+        top: 0%;
+      }
+      #btn2 {
+        position: absolute;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+        background-color: black;
+        color: white;
+        align-items: center;
+        transition: 0.5s;
+        width: 14%;
+        height: 13%;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 26px;
+        letter-spacing: 2px;
+        font-family: monospace;
+        left: 44%;
+        background-color: black;
+        top: 0%;  
+      }
+      #btn3 {
+        position: absolute;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+        background-color: black;
+        color: white;
+        align-items: center;
+        transition: 0.5s;
+        width: 14%;
+        height: 13%;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 26px;
+        letter-spacing: 2px;
+        font-family: monospace;
+        left: 58%;
+        background-color: black;
+        top: 0%;  
+      }
+      #btn1:hover {
+        background-image: url(hakjer.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      #btn2:hover {
+        background-image: url(cod2.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      #btn3:hover {
+        background-image: url(cod.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .box {
+        position: absolute;
+        border-radius: 16px;
+        margin: 0 50px;
+        border: 5px solid black;
+        background: url(geta4.jpg);
+        width:23%;
+        left: 10%;
+        top: 17%;
+        height: 25%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        animation-name: pedzi;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-timing-function:cubic-bezier(0.95, 0.05, 0.795, 0.035)
+      }
+      #one {
+        text-align: center;
+        font-family: Font1;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10%;
+      }
+      #one1 {
+        font-size: 18px;
+        position: absolute;
+        font-weight: bolder;
+        font-family: Font1;
+        text-indent: 2px;
+        color: black;
+        top: 20%;
+        left: 25;
+      }
+      @keyframes pedzi {
+       0% {
+        left: 10%;
+       }
+       100% {
+        left: 34%;
+       }
+      }
+     @keyframes pedzi2 {
+        0% {
+            left: 50%;
+        }
+        100% {
+            left: 77%;
+        }
+     }
+      .box2 {
+        position: absolute;
+        border-radius: 16px;
+        margin: 0 50px;
+        border: 5px solid black;
+        background: url(geta2.jpeg);
+        width:23%;
+        left: 10%;
+        top: 47%;
+        height: 25%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        animation-name: pedzi;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-timing-function:cubic-bezier(0.95, 0.05, 0.795, 0.035);
+      }
+      #two {
+        text-align: center;
+        font-family: Font1;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10%;
+      }
+      #two1 {
+        font-size: 18px;
+        position: absolute;
+        font-weight: bolder;
+        font-family: Font1;
+        text-indent: 2px;
+        color: black;
+        top: 20%;
+        left: 25;
+      }
+      .box3 {
+        position: absolute;
+        border-radius: 16px;
+        margin: 0 50px;
+        border: 5px solid black;
+        background: url(roman.jpg);
+        width:23%;
+        left: 50%;
+        top: 17%;
+        height: 25%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        animation-name: pedzi2;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-timing-function:cubic-bezier(0.95, 0.05, 0.795, 0.035);
+      }
+      #three {
+        text-align: center;
+        font-family: Font1;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10%;
+      }
+      #three1 {
+        font-size: 18px;
+        position: absolute;
+        font-weight: bolder;
+        font-family: Font1;
+        text-indent: 2px;
+        color: black;
+        top: 20%;
+        left: 25;
+      }
+      .box4 {
+        position: absolute;
+        border-radius: 16px;
+        margin: 0 50px;
+        border: 5px solid black;
+        background: url(oklad.png);
+        width:23%;
+        left: 50%;
+        top: 47%;
+        height: 25%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        animation-name: pedzi2;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-timing-function:cubic-bezier(0.95, 0.05, 0.795, 0.035);
+      }
+      #four {
+        text-align: center;
+        font-family: Font1;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10%;
+      }
+      #four1 {
+        font-size: 18px;
+        position: absolute;
+        font-weight: bolder;
+        font-family: Font1;
+        text-indent: 2px;
+        color: black;
+        top: 20%;
+        left: 25;
+      }
+</style>
+<video id="tlo" autoplay loop muted>
+    <source src="dre3.mp4" type="video/mp4">
+    </video>
+    <div class="przyciski">
+        <a href="lossantos.html" target="_blank">
+            <button id="pierwszy">Strona w tył</button>
+        </a>
+        <a href="libertycity.html" target="_blank">
+            <button id="drugi">Strona w przód</button>
+        </a>
+    </div>
+    <div class="przycisk1">
+        <a href="vicecity.txt">
+            <button id="btn1">Kod poprzedniej strony</button>
+        </a>
+    </div>
+    <div class="przycisk2">
+        <a href="libertycity.txt">
+            <button id="btn2">Kod obecnej strony</button>
+        </a>
+    </div>
+    <div class="przycisk3">
+        <a href="skorupa.txt">
+            <button id="btn3">Kod pierwszej strony</button>
+        </a>
+    </div>
+    <div class="box">
+        <h1 id="one">Podstawowe informacje</h1>
+        <p id="one1">
+            Liberty City jest miastem wzorowanym na mieście Nowy York<br>
+            Tak samo jak opisane poprzednio miasta jest miastem pełnym <br>
+            przestepczości oraz występku. Jest pełne ciekawych miejsc takich<br>
+            jak np. huśtawka potrafiąca wysłać każdy pojazd w kosmos<br>
+        </p>
+    </div>
+    <div class="box2">
+        <h1 id="two">Bohaterowie gry</h1>
+        <p id="two1">
+            Głownym bohaterem jest Niko Bellic<br>
+            weteran wojenny z Jugosławii pochodzenia<br>
+            serbskiego, który musiał niestety przejść na<br>
+            ściężkę przestępczości<br>
+        </p>
+    </div>
+    <div class="box3">
+        <h1 id="three">Dodatkowe informacje</h1>
+        <p id="three1">
+            Grafika nie zestarzała się dobrze i <br>
+            moim skromnym zdaniem przed próbą<br>
+            zagrania powinno się zainstalować<br>
+            jakiś mod graficzny<br>
+            ble ble i tak nikt tego nie czyta<br>
+        </p>
+    </div>
+    <div class="box4">
+      <h1 id="four">Przypomnienie dla sora</h1>
+      <p id="four1">
+        Dlatego, że postarałęm się nad stroną<br>
+        oraz reansumując wszystkie aspekty<br>
+        kwintesencji tematu dochodzę do fundamentalnej<br>
+        konluzji, że ta strona jest jakośćiowo wysoka<br>
+      </p>
+    </div>
+    </body>
 </html>
