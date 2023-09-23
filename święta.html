@@ -12,26 +12,6 @@
                 background-size: allign;
             }
             header {
-                text-align: center;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                font-size: 10px;
-                font-weight: bolder;
-                color: black;
-                background-image:url(snieg.jpg) ;
-                height: 35px;
-                width: 1565px;
-            }
-            h1 {
-                text-decoration: underline black;
-                text-align: center;
-                font-weight: bolder;
-                font-size: 29px;
-            }
-            ul, ul li {
-	display: block;
-	list-style: none;
-	margin: 0;
-	padding: 0;
 }
 
 ul {
@@ -54,20 +34,6 @@ ul a:link, ul a:visited {
 	font-weight: bold;
 	background-color: rgb(12, 231, 30);
 	color: #def;
-	border-left: 10px solid rgb(198, 23, 23);
-}
-
-ul a:hover {
-	width: 166px;
-	background-color: rgb(54, 238, 34);
-	color: #fff;
-	border-left: 20px solid rgb(221, 34, 34);
-}
-        </style>
-        <header>
-            <h1>Witam na kolejnej mojej pracy :D</h1>
-        </header>
-        <div class="menu">
             <ul>
                 <li onclick="m1()"><a href="#film1">Bóg się rodzi</a></li>
                 <li onclick="myF3()"><a href="#film3">Gore gwiazda</a></li>
@@ -89,23 +55,7 @@ ul a:hover {
             {document.getElementById('film1').style.display="block";}
             {document.getElementById('film3').style.display="none";}
             {document.getElementById('film4').style.display="none";}
-            {document.getElementById('film5').style.display="none";}
-            {document.getElementById('film6').style.display="none";}
-            {document.getElementById('film7').style.display="none";}
-            {document.getElementById('film8').style.display="none";}
-            {document.getElementById('film9').style.display="none";}
-            {document.getElementById('film10').style.display="none";}
-          }
-          function myF3() {
-            {document.getElementById('film3').style.display="block";}
-            {document.getElementById('film1').style.display="none";}
-            {document.getElementById('film4').style.display="none";}
-            {document.getElementById('film5').style.display="none";}
-            {document.getElementById('film6').style.display="none";}
-            {document.getElementById('film7').style.display="none";}
-            {document.getElementById('film8').style.display="none";}
-            {document.getElementById('film9').style.display="none";}
-            {document.getElementById('film10').style.display="none";}
+            {document.getElementById('film5').style.di
           }
           function myFunction4() {
             {document.getElementById('film4').style.display="block";}
@@ -121,25 +71,6 @@ ul a:hover {
           function myFunction5() {
             {document.getElementById('film5').style.display="block";}
             {document.getElementById('film1').style.display="none";}
-            {document.getElementById('film3').style.display="none";}
-            {document.getElementById('film4').style.display="none";}
-            {document.getElementById('film6').style.display="none";}
-            {document.getElementById('film7').style.display="none";}
-            {document.getElementById('film8').style.display="none";}
-            {document.getElementById('film9').style.display="none";}
-            {document.getElementById('film10').style.display="none";}
-          } 
-          function myFunction6() {
-            {document.getElementById('film6').style.display="block";}
-            {document.getElementById('film3').style.display="none";}
-            {document.getElementById('film4').style.display="none";}
-            {document.getElementById('film1').style.display="none";}
-            {document.getElementById('film5').style.display="none";}
-            {document.getElementById('film7').style.display="none";}
-            {document.getElementById('film8').style.display="none";}
-            {document.getElementById('film9').style.display="none";}
-            {document.getElementById('film10').style.display="none";}
-          }
           function myFunction7() {
             {document.getElementById('film7').style.display="block";}
             {document.getElementById('film1').style.display="none";}
@@ -160,18 +91,6 @@ ul a:hover {
             {document.getElementById('film6').style.display="none";}
             {document.getElementById('film7').style.display="none";}
             {document.getElementById('film9').style.display="none";}
-            {document.getElementById('film10').style.display="none";}
-          }
-          function myFunction9() {
-            {document.getElementById('film9').style.display="block";}
-            {document.getElementById('film3').style.display="none"}
-            {document.getElementById('film4').style.display="none"}
-            {document.getElementById('film5').style.display="none"}
-            {document.getElementById('film6').style.display="none"}
-            {document.getElementById('film7').style.display="none"}
-            {document.getElementById('film8').style.display="none"}
-            {document.getElementById('film10').style.display="none"}
-            {document.getElementById('film1').style.display="none"}
           }
           function myFunction10() {
             {document.getElementById('film10').style.display="block";}
@@ -189,16 +108,6 @@ ul a:hover {
        <video style="height: 700; width: 1300; position: relative; left: 210; right: 0; bottom: 300; top: -670; display: none;" controls id="film1">
         <source src="bog.mp4">
        </video>
-        </div> 
-       <div class="film3">
-        <video style="height: 700; width: 1330; position: relative; left: 230; right: 0; bottom: 300; top: -670; display: none;" controls id="film3">
-            <source src="gore.mp4">
-        </video>
-    </div>
-       </div> 
-       <div class="film4">
-        <video style="height: 700; width: 1270; position: relative; left: 240; right: 0; bottom: 300; top: -670; display: none;" controls id="film4">
-            <source src="cicha.mp4">
         </video>
        </div>
        <div class="film5">
@@ -219,15 +128,7 @@ ul a:hover {
       <div class="film8">
         <video id="film8" style="height: 700; width: 1270; position: relative; left: 240; right: 0; bottom: 300; top: -670; display: none;" controls>
         <source src="luj.mp4">
-        </video>
-      </div>
-      <div class="film9">
-        <video id="film9" style="height: 700; width: 1270; position: relative; left: 240; right: 0; bottom: 300; top: -670; display: none;" controls>
-        <source src="skr.mp4">
-        </video>
-      </div>
-      <div class="film10">
-        <video id="film10" style="height: 700; width: 1270; position: relative; left: 240; right: 0; bottom: 300; top: -670; display: none;" controls>
+        </video>ght: 0; bottom: 300; top: -670; display: none;" controls>
         <source src="hej.mp4">
         </video>
       </div>
