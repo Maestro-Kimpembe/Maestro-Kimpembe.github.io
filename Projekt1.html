@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierwszy program w JS</title>
+    <style>
+        #text {
+            color: red;
+            font-size: 30px;
+            text-align: center;
+            text-decoration: solid;
+            background-image: linear-gradient(to top left, blue, blue, white, blue);
+            width: 18%;
+            margin-left: 41%;
+            border-radius: 16px;
+            margin-top: 19%;
+            border: 10px solid black;
+        }
+        body {
+            background-image: linear-gradient(to bottom right, gray, black,gray);
+            overflow-x: hidden;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            min-width: 3rem;
+            min-height: 40rem;
+            overflow-y: hidden;
+        }
+        #toggleButton {
+            margin-top: 1rem;
+            background-image: linear-gradient(to top right, red, orange, yellow, red);
+            font-size: 2rem;
+            margin-left: 43%;
+            margin-top: 10%;
+            border-radius: 16px;
+            font-weight: bolder;
+            font-style: italic;
+            border: 10px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">Konrad Chwiejczak</p>
+    <button id="toggleButton">Zmień mój kolor</button>
+
+    <script>
+        
+        const textElement = document.getElementById('text');
+        const toggleButton = document.getElementById('toggleButton');
+
+        function toggleColor() {
+            if (textElement.style.color === 'red') {
+                textElement.style.color = 'green';
+            } else {
+                textElement.style.color = 'red';
+            }
+        }
+
+        toggleButton.addEventListener('click', toggleColor);
+    </script>
+</body>
+</html>
