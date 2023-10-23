@@ -9,6 +9,7 @@
         body {
             background-image:linear-gradient(to bottom right, blue, blue, blue, cyan, cyan,darkblue, darkblue, darkblue);
             overflow-x: hidden;
+            overflow-y: hidden;
         }
      #tort {
        position: absolute;
@@ -131,6 +132,21 @@
         90% {
             background-color: blue;
         }
+      }
+      #move {
+        position: absolute;
+        margin-left: -0.5%;
+        text-align: center;
+        width: 100%;
+        height: 5%;
+        margin-top: 48.19%;
+        font-weight: bolder;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: color-mix(in srgb, red 58%, orange 42%);
+        font-size: 14px;
+      }
+      marquee {
+        margin-top: 0.6%;
       }
     </style>
     <script>
@@ -305,5 +321,9 @@
         <a href="https://katalogmarzen.pl/pl/zyczenia-urodzinowe"><img id="swieczka5" onmouseover="pojawienie5(); zmiana5(); zmiana_tla5()" onmouseout="znikniecie5(); zmiana_powrotna5(); zmiana_tla_powrotna5()" src="łogin1.png"></a>
     </div>
     <button id="pierwszy" onclick="muzyka1()">Wciśnij aby dostać muzyczkę</button>
+    <div id="move"><marquee direction="right">
+        Ocena celująca to jedyna droga!
+    </marquee>
+    </div>
     </body>
 </html>
