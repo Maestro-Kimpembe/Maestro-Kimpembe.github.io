@@ -1,0 +1,423 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url(tlo1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.box {
+  position: absolute;
+  margin-left: 20%;
+  background-image: url(santa.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 60%;
+  height: 40vh;
+  border-radius: 16px;
+  border: solid red 7px;
+  justify-content: space-between;
+  margin-top: 0vh;
+  background-position: center;
+  display: flex;
+  max-width: 100%;
+}
+
+.center {
+  position: absolute;
+  width: 12%;
+  height: 19%;
+  border-radius: 16px;
+  border: solid black 6px;
+  background-color: rgb(25, 123, 35);
+  margin: 0;
+  font-family: Font;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+#btn1 {
+  margin-top: 2vh;
+  margin-left: 2vh;
+}
+
+.center:hover {
+  background-image: linear-gradient(to right,
+      #E7484F,
+      #F68B1D,
+      #FCED00,
+      #009E4F,
+      #00AAC3,
+      #732982);
+  animation: slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
+
+#btn2 {
+  margin-top: 2vh;
+  margin-left: 11vw;
+}
+
+#btn3 {
+  margin-top: 2vh;
+  margin-left: 21vw;
+}
+
+#btn4 {
+  margin-top: 2vh;
+  margin-left: 31vw;
+}
+
+#btn5 {
+  margin-top: 2vh;
+  margin-left: 40.5vw;
+}
+
+#btn6 {
+  margin-top: 2vh;
+  margin-left: 50.5vw;
+}
+
+#btn7 {
+  margin-top: 12vh;
+  margin-left: 2vh;
+}
+
+#btn8 {
+  margin-top: 12vh;
+  margin-left: 11vw;
+}
+
+#btn9 {
+  margin-top: 12vh;
+  margin-left: 21vw;
+}
+
+#btn10 {
+  margin-top: 12vh;
+  margin-left: 31vw;
+}
+
+#btn11 {
+  margin-top: 12vh;
+  margin-left: 40.5vw;
+}
+
+#btn12 {
+  margin-top: 12vh;
+  margin-left: 50.5vw;
+}
+
+#btn13 {
+  margin-top: 22vh;
+  margin-left: 2vh;
+}
+
+#btn14 {
+  margin-top: 22vh;
+  margin-left: 11vw;
+}
+
+#btn15 {
+  margin-top: 22vh;
+  margin-left: 21vw;
+}
+
+#btn16 {
+  margin-top: 22vh;
+  margin-left: 31vw;
+}
+
+#btn17 {
+  margin-top: 22vh;
+  margin-left: 40.5vw;
+}
+
+#btn18 {
+  margin-top: 22vh;
+  margin-left: 50.5vw;
+}
+
+#btn19 {
+  margin-top: 32vh;
+  margin-left: 2vh;
+}
+
+#btn20 {
+  margin-top: 32vh;
+  margin-left: 11vw;
+}
+
+#btn21 {
+  margin-top: 32vh;
+  margin-left: 21vw;
+}
+
+#btn22 {
+  margin-top: 32vh;
+  margin-left: 31vw;
+}
+
+#btn23 {
+  margin-top: 32vh;
+  margin-left: 40.5vw;
+}
+
+#btn24 {
+  margin-top: 32vh;
+  margin-left: 50.5vw;
+}
+
+@font-face {
+  font-family: Font;
+  src: url(Home\ Christmas.otf);
+}
+
+@keyframes baton {
+  0% {
+    background-color: rgb(0, 238, 255);
+    color: black;
+    border: solid black 10px;
+  }
+
+  20% {
+    background-color: rgb(0, 30, 255);
+    color: whitesmoke;
+    border: solid black 12px;
+  }
+
+  40% {
+    background-color: rgb(153, 0, 255);
+    color: whitesmoke;
+    border: solid black 14px;
+  }
+
+  60% {
+    background-color: rgb(255, 0, 0);
+    color: yellow;
+  }
+
+  80% {
+    background-color: rgb(255, 221, 0);
+    color: rgb(255, 102, 0);
+  }
+
+  100% {
+    background-color: rgb(89, 255, 0);
+    color: red;
+  }
+}
+
+.naglow {
+  position: relative;
+  text-align: center;
+  font-size: 6vh;
+  margin-top: 10vh;
+  width: 70vw;
+  height: 10vh;
+  font-family: Font;
+  margin-left: 14%;
+  font-weight: bolder;
+}
+
+#text {
+  position: relative;
+  margin-top: 48vh;
+  font-family: Font;
+  margin-left: 17%;
+  font-size: 4vh;
+  visibility: hidden;
+}
+
+@media screen and (max-width:750px) {
+  .naglow {
+    font-size: 3vh;
+    margin-left: 20%;
+  }
+
+  .box {
+    width: 75%;
+    margin-left: 15%;
+  }
+
+  .center {
+    font-size: 3vh;
+    width: 9vw;
+  }
+
+  #btn2 {
+    margin-left: 13vw;
+    height: 20%;
+    line-height: 1vh;
+    width: 16%;
+  }
+
+  #btn1 {
+    margin-left: 1vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn3 {
+    margin-left: 26vw;
+    height: 20%;
+    line-height: 1vh;
+    width: 16%;
+  }
+
+  #btn4 {
+    margin-left: 38vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn5 {
+    margin-left: 51vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn6 {
+    margin-left: 63vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn7 {
+    margin-left: 1vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn8 {
+    margin-left: 13vw;
+    height: 20%;
+    line-height: 1vh;
+    width: 16%;
+  }
+
+  #btn9 {
+    margin-left: 26vw;
+    height: 20%;
+    line-height: 1vh;
+    width: 16%;
+  }
+
+  #btn10 {
+    margin-left: 38vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn11 {
+    margin-left: 51vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn12 {
+    margin-left: 63vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn13 {
+    margin-left: 1vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn14 {
+    margin-left: 13vw;
+    height: 20%;
+    line-height: 1vh;
+    width: 16%;
+  }
+
+  #btn15 {
+    margin-left: 26vw;
+    height: 20%;
+    line-height: 1vh;
+    width: 16%;
+  }
+
+  #btn16 {
+    margin-left: 38vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn17 {
+    margin-left: 51vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn18 {
+    margin-left: 63vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn19 {
+    margin-left: 1vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn20 {
+    margin-left: 13vw;
+    height: 20%;
+    line-height: 1vh;
+    width: 16%;
+  }
+
+  #btn21 {
+    margin-left: 26vw;
+    height: 20%;
+    line-height: 1vh;
+    width: 16%;
+  }
+
+  #btn22 {
+    margin-left: 38vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn23 {
+    margin-left: 51vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+
+  #btn24 {
+    margin-left: 63vw;
+    line-height: 1vh;
+    width: 16%;
+    height: 20%;
+  }
+}

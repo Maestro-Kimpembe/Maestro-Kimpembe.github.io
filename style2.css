@@ -1,0 +1,176 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 101% 101%;
+  overflow-x: hidden;
+  background-image: url(soldier.jpg);
+  overflow-y: hidden;
+}
+
+.skazanie {
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+  font-family: Font;
+  width: 6vw;
+  margin-left: 23vw;
+  margin-top: 0vh;
+  font-size: 20vh;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  animation-name: rosnij;
+  animation-duration: 2s;
+}
+
+@font-face {
+  font-family: Font;
+  src: url(PERSON.ttf);
+}
+
+@keyframes rosnij {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#wyjscie {
+  position: absolute;
+  width: 30vw;
+  height: 20vh;
+  margin-top: 80vh;
+  margin-left: 36vw;
+  border-radius: 20px;
+  font-weight: bolder;
+  font-family: Font;
+  font-size: 7vh;
+  background-color: #eeff00;
+  border: 10px solid black;
+}
+
+#wyjscie:hover,
+#pozegnanie:hover {
+  background-image: linear-gradient(to right,
+      #E7484F,
+      #F68B1D,
+      #FCED00,
+      #009E4F,
+      #00AAC3,
+      #732982);
+  animation: slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
+
+.arrow1 {
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  position: absolute;
+  margin-top: 80vh;
+  margin-left: 16vw;
+  width: 20vw;
+  height: 20vh;
+  background-color: black;
+}
+
+.arrow2 {
+  position: absolute;
+  clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+  margin-top: 80vh;
+  background-color: black;
+  width: 20vw;
+  height: 20vh;
+  margin-left: 66vw;
+}
+
+#pozegnanie {
+  position: absolute;
+  width: 30vw;
+  height: 20vh;
+  margin-top: 0vh;
+  margin-left: 36vw;
+  border-radius: 20px;
+  font-weight: bolder;
+  font-family: Font;
+  font-size: 7vh;
+  background-color: #eeff00;
+  border: 10px solid black;
+}
+
+.arrow3 {
+  position: absolute;
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  margin-top: 0vh;
+  margin-left: 16vw;
+  width: 20vw;
+  height: 20vh;
+  background-color: black;
+}
+
+.arrow4 {
+  position: absolute;
+  clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+  margin-top: 0vh;
+  background-color: black;
+  width: 20vw;
+  height: 20vh;
+  margin-left: 66vw;
+}
+
+@media screen and (max-width:750px) {
+  .skazanie {
+    position: absolute;
+    font-size: 7vh;
+    margin-left: 20vw;
+  }
+
+  .arrow3 {
+    margin-left: 16vw;
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-size: 110% 115%;
+  }
+
+  #pozegnanie {
+    margin-left: 36vw;
+    font-size: 2.3vh;
+  }
+
+  .arrow4 {
+    margin-left: 68vw;
+  }
+
+  .arrow1 {
+    margin-left: 13vw;
+    margin-top: 70vh;
+  }
+
+  .arrow2 {
+    margin-left: 65.5vw;
+    margin-top: 70vh;
+  }
+
+  #wyjscie {
+    margin-left: 34.5vw;
+    font-size: 2.3vh;
+    margin-top: 70vh;
+  }
+}

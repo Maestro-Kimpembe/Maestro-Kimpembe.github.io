@@ -1,0 +1,79 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 101% 101%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#tlo {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  right: 0;
+  bottom: 0;
+}
+
+.kolega {
+  visibility: hidden;
+}
+
+@font-face {
+  font-family: Font;
+  src: url(PERSON.ttf);
+}
+
+.kolega1 {
+  visibility: hidden;
+}
+
+@media screen and (max-width:750px) {
+  #tlo {
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    background-size: cover 100% 100%;
+    width: 100%;
+  }
+
+  .body {
+    background-image: url(gta55.jpg);
+    background-repeat: no-repeat;
+    background-size: 105% 105%;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .kolega {
+    visibility: visible;
+    display: flex;
+    position: absolute;
+    margin-left: 0%;
+    width: 20vw;
+    height: 10vh;
+    margin-top: 21vh;
+    font-size: 5vh;
+    font-family: Font;
+    z-index: 2;
+  }
+
+  .kolega1 {
+    visibility: visible;
+    display: flex;
+    position: absolute;
+    margin-left: 0%;
+    width: 20vw;
+    height: 10vh;
+    margin-top: 60vh;
+    font-size: 5vh;
+    font-family: Font;
+    z-index: 2;
+  }
+}
