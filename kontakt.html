@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma IT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+</head>
+<script>
+    function formularz1() {
+        let check = document.getElementById("check").checked;
+        if (check) {
+            let wynik = document.getElementById("wynik");
+            let imie = document.getElementById("imie").value;
+            let nazwisko = document.getElementById("nazwisko").value;
+            let usluga = document.getElementById("zgloszenie").value;
+            wynik.innerHTML = "<span style='color: navy'>" + imie + " " + nazwisko + "<br/>" + "Treść twojej sprawy: " + usluga + "</span>";
+
+        }
+        else {
+            wynik.innerHTML = "<span style='color: red;'>" + imie + " " + nazwisko + "<br/>" + "Treść twojej sprawy: " + usluga + "</span>";
+        }
+    }
+</script>
+<body>
+    <section id="calosc">
+    <header id="glowa">
+<img id="logo" src="logo.png" alt="logo firmy">
+    <section id="menu">
+        <a id="one" href="kontakt.html">Kontakt</a>
+        <a id="two" href="uslugi.html">Usługi</a>
+        <a id="three" href="index.html">Strona głowna</a>
+    </header>
+    </section>
+    <section id="baner">
+        <img src="animacja.gif" alt="Usługi informatyczne">
+    </section>
+    <section id="glowny">
+    <h2>Kontakt</h2>
+    <form>
+        <table>
+            <tr>
+                <td>Imię:</td>
+                <td><input type="text" id="imie"></td>
+            </tr>
+            <tr>
+                <td>Nazwisko:</td>
+                <td><input type="text" id="nazwisko"></td>
+            </tr>
+            <tr>
+                <td>E-mail:</td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>Zgłoszenie:</td>
+                <td><textarea id="zgloszenie" cols="40" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" id="check">Zapoznałem się z regulaminem</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="reset">Resetuj</button><button type="button" onclick="formularz1();">Prześlij</td>
+            </tr>
+        </table>
+    </form>
+    <hr/>
+    <p id="wynik"></p>
+    </section>
+    <section id="stopka">
+        <p>Autor strony: <strong>0000000000000</strong></p>
+    </section>
+</section>
+</body>
+</html>
