@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Członkowie rodziny - Sklep u Grabusia</title>
+    <title>Sklep u Grabusia</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <nav class="navbar" id="navbar">
+    <nav id="navbar" class="navbar">
         <div class="nav-container">
             <div class="logo">Sklep u Grabusia</div>
             <ul class="nav-links">
-                <li><a href="family.html">Członkowie rodziny</a></li>
+                <li><a href="rodzinka.html">Członkowie rodziny</a></li>
                 <li><a href="trips.html">Miejsca wycieczek</a></li>
                 <li><a href="index.html">Strona główna</a></li>
             </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
         </div>
     </nav>
 
@@ -25,147 +28,197 @@
         </div>
     </section>
 
-    <section class="section" id="family-members">
+    <section class="section">
         <div class="container">
             <div class="family-navigation">
-                <button class="nav-btn prev-btn" id="prevBtn" onclick="changeFamilyPage(-1)">
+                <button id="prevBtn" class="nav-btn" onclick="changeFamilyPage(-1)">
                     <span>‹</span>
                 </button>
-                
                 <div class="family-grid-container">
-                    <div class="family-grid" id="familyGrid">
-                        <!-- Page 1 - Default visible -->
-                        <div class="family-card" data-page="1">
-                            <div class="family-image" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="family-grid">
+                        <!-- Page 1 -->
+                        <div class="family-card active" data-page="1">
+                            <div class="family-image" style="background-image: url('persons/waldi.png');"></div>
                             <div class="family-content">
-                                <h3>Tata Grąbuś</h3>
-                                <p class="role">Głowa rodziny</p>
+                                <h3>Tata 1</h3>
+                                <div class="role">Głowa projektu Erasmus+</div>
                                 <p>Mądry i doświadczony, zawsze ma dla nas dobre rady. Uwielbia opowiadać historie z przeszłości.</p>
                             </div>
                         </div>
-                        
                         <div class="family-card" data-page="1">
-                            <div class="family-image" style="background-image: url('https://images.unsplash.com/photo-1494790108755-2616c9c4db8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="family-image" style="background-image: url('persons/grabias.png');"></div>
                             <div class="family-content">
-                                <h3>Mama Grąbuś</h3>
-                                <p class="role">Serce rodziny</p>
+                                <h3>Tata 2</h3>
+                                <div class="role">Serce projektu Erasmus+</div>
                                 <p>Najlepsza kucharka na świecie i nasza największa wspieraczka w każdej przygodzie.</p>
                             </div>
                         </div>
-
                         <div class="family-card" data-page="1">
-                            <div class="family-image" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="family-image" style="background-image: url('persons/szuty.png');"></div>
                             <div class="family-content">
-                                <h3>Syn Grąbuś</h3>
-                                <p class="role">Student Erasmus+</p>
+                                <h3>Stażysta 19</h3>
+                                <div class="role">Student z wymiany</div>
                                 <p>Bada świat dzięki programowi Erasmus+. Uwielbia poznawać nowe kultury i języki.</p>
                             </div>
                         </div>
-
                         <div class="family-card" data-page="1">
-                            <div class="family-image" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="family-image" style="background-image: url('persons/monika.png');"></div>
                             <div class="family-content">
-                                <h3>Córka Grąbuś</h3>
-                                <p class="role">Artystka</p>
+                                <h3>Mama 1</h3>
+                                <div class="role">Opiekun i anioł stróż</div>
                                 <p>Kreatywna dusza rodziny. Dokumentuje nasze podróże przez fotografię i rysunki.</p>
                             </div>
                         </div>
-
                         <!-- Page 2 -->
                         <div class="family-card" data-page="2">
-                            <div class="family-image" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="family-image" style="background-image: url('persons/konrad.png');"></div>
                             <div class="family-content">
-                                <h3>Babcia Grąbuś</h3>
-                                <p class="role">Mądrość pokoleń</p>
+                                <h3>Konrad "Kundzio" Chwiejczak</h3>
+                                <div class="role">Kibic Arsenalu i ryżowy amator</div>
                                 <p>Opiekunka tradycji rodzinnych. Jej przepisy kulinarne są naszym skarbem.</p>
                             </div>
                         </div>
-
                         <div class="family-card" data-page="2">
-                            <div class="family-image" style="background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="family-image" style="background-image: url('persons/alex.png');"></div>
                             <div class="family-content">
-                                <h3>Dziadek Grąbuś</h3>
-                                <p class="role">Strażnik historii</p>
+                                <h3>Alex "Somalijski Imigrant" Ruszczyński</h3>
+                                <div class="role">Agent Solarium</div>
                                 <p>Nasz rodzinny historyk. Pamięta każdą datę i opowieść z przeszłości rodziny.</p>
                             </div>
                         </div>
-
                         <div class="family-card" data-page="2">
-                            <div class="family-image" style="background-image: url('https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="family-image" style="background-image: url('persons/borys.png');"></div>
                             <div class="family-content">
-                                <h3>Ciocia Grąbuś</h3>
-                                <p class="role">Dusza towarzystwa</p>
+                                <h3>Borys Czuryło</h3>
+                                <div class="role">Dusza towarzystwa</div>
                                 <p>Zawsze roześmiechana i pełna energii. Organizuje wszystkie rodzinne spotkania.</p>
                             </div>
                         </div>
-
                         <div class="family-card" data-page="2">
-                            <div class="family-image" style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="family-image" style="background-image: url('persons/daria.png');"></div>
                             <div class="family-content">
-                                <h3>Wujek Grąbuś</h3>
-                                <p class="role">Majster złota rączka</p>
+                                <h3>Darya Kharlanovich</h3>
+                                <div class="role">Majster złota rączka</div>
                                 <p>Potrafi naprawić wszystko! Jego warsztat to magiczne miejsce pełne narzędzi.</p>
                             </div>
                         </div>
-
                         <!-- Page 3 -->
                         <div class="family-card" data-page="3">
-                            <div class="family-image" style="background-image: url('https://images.unsplash.com/photo-1474978528675-4a50a4508dc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="family-image" style="background-image: url('persons/dawid.png');"></div>
                             <div class="family-content">
-                                <h3>Kuzyn Grąbuś</h3>
-                                <p class="role">Sportowiec</p>
+                                <h3>Dawid Wołoch</h3>
+                                <div class="role">Sportowiec</div>
                                 <p>Mistrz w każdej dyscyplinie sportu. Zawsze gotowy na aktywną przygodę.</p>
                             </div>
                         </div>
-
                         <div class="family-card" data-page="3">
-                            <div class="family-image" style="background-image: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="family-image" style="background-image: url('persons/igor1.png');"></div>
                             <div class="family-content">
-                                <h3>Kuzynka Grąbuś</h3>
-                                <p class="role">Muzyk</p>
+                                <h3>Igor Czuryło</h3>
+                                <div class="role">Muzyk</div>
                                 <p>Gra na fortepianie jak anioł. Jej muzyka zawsze rozjaśnia nasze serca.</p>
                             </div>
                         </div>
-
                         <div class="family-card" data-page="3">
-                            <div class="family-image" style="background-image: url('https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="family-image" style="background-image: url('persons/igor2.png');"></div>
                             <div class="family-content">
-                                <h3>Piesek Grąbuś</h3>
-                                <p class="role">Maskotka rodziny</p>
+                                <h3>Igor Studnicki</h3>
+                                <div class="role">Maskotka rodziny</div>
                                 <p>Najwierniejszy członek rodziny. Zawsze witał nas radosnym merdaniem ogona.</p>
                             </div>
                         </div>
-
                         <div class="family-card" data-page="3">
-                            <div class="family-image" style="background-image: url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="family-image" style="background-image: url('persons/kinga.png');"></div>
                             <div class="family-content">
-                                <h3>Kotek Grąbuś</h3>
-                                <p class="role">Strażnik domu</p>
+                                <h3>Kinga "Ziemniak" Dobrowolska</h3>
+                                <div class="role">Strażnik domu</div>
                                 <p>Elegancki i niezależny. Pilnuje domu i zawsze znajduje najcieplejsze miejsce do spania.</p>
+                            </div>
+                        </div>
+                        <!-- Page 4 -->
+                        <div class="family-card" data-page="4">
+                            <div class="family-image" style="background-image: url('persons/kuchta.png');"></div>
+                            <div class="family-content">
+                                <h3>Viktor "SuperBock" Fettisov</h3>
+                                <div class="role">Guru technologii</div>
+                                <p>Zawsze wie jak naprawić komputer i rozwiązać każdy problem techniczny. Nasz rodzinny IT support.</p>
+                            </div>
+                        </div>
+                        <div class="family-card" data-page="4">
+                            <div class="family-image" style="background-image: url('persons/mateusz1.png');"></div>
+                            <div class="family-content">
+                                <h3>Mateusz "JoJo" Puk</h3>
+                                <div class="role">Miłośniczka literatury</div>
+                                <p>Czyta wszystko co wpadnie jej w ręce. Ma największą bibliotekę w okolicy i zawsze poleci dobrą książkę.</p>
+                            </div>
+                        </div>
+                        <div class="family-card" data-page="4">
+                            <div class="family-image" style="background-image: url('persons/mateusz2.png');"></div>
+                            <div class="family-content">
+                                <h3>Mateusz "Żeton" Oszust</h3>
+                                <div class="role">Odkrywca światów</div>
+                                <p>Zwiedził już pół świata i zawsze ma fascynujące historie z podróży. Inspiruje nas do odkrywania nowych miejsc.</p>
+                            </div>
+                        </div>
+                        <div class="family-card" data-page="4">
+                            <div class="family-image" style="background-image: url('persons/milosz.png');"></div>
+                            <div class="family-content">
+                                <h3>Miłosz Proć</h3>
+                                <div class="role">Twórcza dusza</div>
+                                <p>Maluje przepiękne obrazy i tworzy unikalne rzeźby. Jej warsztat to kolorowy świat pełen inspiracji.</p>
+                            </div>
+                        </div>
+                        <!-- Page 5 -->
+                        <div class="family-card" data-page="5">
+                            <div class="family-image" style="background-image: url('persons/patryk.png');"></div>
+                            <div class="family-content">
+                                <h3>Patryk "Balik" Balicki</h3>
+                                <div class="role">Mistrz kuchni</div>
+                                <p>Gotuje jak prawdziwy szef kuchni. Jego potrawy to prawdziwe dzieła sztuki kulinarne.</p>
+                            </div>
+                        </div>
+                        <div class="family-card" data-page="5">
+                            <div class="family-image" style="background-image: url('persons/sofia.png');"></div>
+                            <div class="family-content">
+                                <h3>Sofia Lakh</h3>
+                                <div class="role">Miłośniczka natury</div>
+                                <p>Ma zielone ręce - wszystko co posadzi, pięknie rośnie. Jej ogród to prawdziwy raj na ziemi.</p>
+                            </div>
+                        </div>
+                        <div class="family-card" data-page="5">
+                            <div class="family-image" style="background-image: url('persons/vika.png');"></div>
+                            <div class="family-content">
+                                <h3>Viktoria Panchenko</h3>
+                                <div class="role">Król motoryzacji</div>
+                                <p>Zna się na samochodach jak nikt inny. Potrafi naprawić każde auto i zawsze pomoże w potrzebie.</p>
+                            </div>
+                        </div>
+                        <div class="family-card" data-page="5">
+                            <div class="family-image" style="background-image: url('persons/zuzanna.png');"></div>
+                            <div class="family-content">
+                                <h3>Zuzanna "Jaskinowiec" Naklicka</h3>
+                                <div class="role">Łowczyni chwil</div>
+                                <p>Robi najpiękniejsze zdjęcia z naszych wyjazdów. Dzięki niej każda ważna chwila zostaje uwieczniona.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <button class="nav-btn next-btn" id="nextBtn" onclick="changeFamilyPage(1)">
+                <button id="nextBtn" class="nav-btn" onclick="changeFamilyPage(1)">
                     <span>›</span>
                 </button>
             </div>
-            
             <div class="page-indicator">
-                <span class="page-dot active" data-page="1"></span>
-                <span class="page-dot" data-page="2"></span>
-                <span class="page-dot" data-page="3"></span>
+                <div class="page-dot active"></div>
+                <div class="page-dot"></div>
+                <div class="page-dot"></div>
+                <div class="page-dot"></div>
+                <div class="page-dot"></div>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Sklep u Grabusia - Erasmus Travel Project</p>
-        </div>
+        <p>© 2025 Sklep u Grabusia - Erasmus Travel Project</p>
     </footer>
-
-    <script src="main.js"></script>
 </body>
 </html>
