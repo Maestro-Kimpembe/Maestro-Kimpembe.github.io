@@ -320,59 +320,111 @@ body {
     line-height: 1.5;
 }
 
-/* Places Grid */
-.places-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.place-card {
+/* Trip Sections */
+.trip-section {
     background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
-.place-card:hover {
+.trip-section:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.place-image {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+.trip-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
 }
 
-.place-content {
-    padding: 1.5rem;
-}
-
-.place-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.place-content p {
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.4;
+.trip-header h3 {
+    font-size: 2rem;
     margin-bottom: 1rem;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
 }
 
-.place-date {
-    display: inline-block;
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    color: white;
-    padding: 0.3rem 0.8rem;
+.trip-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trip-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.trip-photo {
+    position: relative;
     border-radius: 15px;
-    font-size: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.trip-photo:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.trip-photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.trip-photo:hover img {
+    transform: scale(1.05);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 1.5rem 1rem 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.trip-photo:hover .photo-caption {
+    transform: translateY(0);
+}
+
+/* Image fallback for missing photos */
+.trip-photo img[src$=".jpg"]:not([src*="http"]) {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trip-photo img[src$=".jpg"]:not([src*="http"])::after {
+    content: "📷";
+    font-size: 2rem;
+    color: white;
 }
 
 /* Footer */
@@ -424,8 +476,26 @@ body {
         font-size: 1.2rem;
     }
     
-    .places-grid {
-        grid-template-columns: 1fr;
+    .trip-section {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .trip-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .trip-description {
+        font-size: 1rem;
+    }
+    
+    .trip-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .trip-photo img {
+        height: 150px;
     }
     
     .welcome-content {
@@ -438,6 +508,44 @@ body {
     
     .container {
         padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .trip-section {
+        padding: 1rem;
+    }
+    
+    .trip-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .trip-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .trip-photo img {
+        height: 180px;
+    }
+    
+    .family-grid {
+        grid-template-columns: 1fr;
     }
 }
 
