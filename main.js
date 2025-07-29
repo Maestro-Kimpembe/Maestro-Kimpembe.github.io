@@ -33,16 +33,15 @@ document.querySelectorAll('.family-card, .place-card, .welcome-card').forEach(ca
     });
 });
 
-// Mobile menu toggle (for future enhancement)
+// Mobile menu toggle
 function toggleMobileMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
 }
 
-// Add loading animation
 // Family members navigation
 let currentFamilyPage = 1;
-const totalFamilyPages = 3;
+const totalFamilyPages = 5;
 
 function changeFamilyPage(direction) {
     const newPage = currentFamilyPage + direction;
@@ -118,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Existing fade in animation code...
     // Fade in animation for cards
     const cards = document.querySelectorAll('.family-card, .place-card, .welcome-card');
     
@@ -142,8 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(card);
     });
-
-    // Hero section remains static - no parallax effect needed
 });
 
 // Image lazy loading for better performance

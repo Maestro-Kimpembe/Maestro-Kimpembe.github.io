@@ -288,7 +288,7 @@ body {
 }
 
 .family-image {
-    height: 250px;
+    height: 400px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -546,24 +546,6 @@ body {
     
     .family-grid {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 1.5rem;
-    }
-    
-    .hero-content p {
-        font-size: 1rem;
-    }
-    
-    .nav-container {
-        padding: 0 1rem;
-    }
-    
-    .logo {
-        font-size: 1.5rem;
     }
 }
 
