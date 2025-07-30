@@ -5,11 +5,82 @@
     box-sizing: border-box;
 }
 
+/* Theme Variables */
+:root {
+    /* Primary Colors */
+    --primary-color: #6a89cc; /* A pleasant blue, slightly brighter */
+    --secondary-color: #786fa6; /* A muted purple */
+    --accent-color: #f7d794; /* A soft yellow for accents */
+
+    /* Backgrounds */
+    --bg-primary: #f8f9fa; /* Light background for general content */
+    --bg-secondary: #e9ecef; /* Slightly darker background for sections */
+    --bg-card: #ffffff; /* White cards for contrast */
+
+    /* Text Colors */
+    --text-primary: #212529; /* Dark text for readability */
+    --text-secondary: #495057; /* Muted text for descriptions */
+    --text-tertiary: #6c757d; /* Lighter text for minor details */
+    --text-muted: #adb5bd; /* Very light text for muted elements */
+
+    /* Borders & Shadows */
+    --border-color: rgba(0, 0, 0, 0.1);
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.12);
+
+    /* Navbar */
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --navbar-scrolled: rgba(255, 255, 255, 0.98);
+
+    /* Footer */
+    --footer-bg: var(--primary-color); /* Footer matches primary color */
+    --footer-text: white;
+
+    /* Hero Overlay - adjusted to match new primary/secondary */
+    --hero-overlay: rgba(106, 137, 204, 0.7), rgba(120, 111, 166, 0.7);
+}
+
+[data-theme="dark"] {
+    /* Primary Colors - Dark Theme */
+    --primary-color: #4b6584; /* Darker blue */
+    --secondary-color: #5e4a86; /* Darker purple */
+    --accent-color: #f7d794; /* Yellow accent remains */
+
+    /* Backgrounds - Dark Theme */
+    --bg-primary: #121212; /* Very dark background */
+    --bg-secondary: #1e1e1e; /* Darker background for sections */
+    --bg-card: #2c2c2c; /* Darker cards */
+
+    /* Text Colors - Dark Theme */
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-tertiary: #909090;
+    --text-muted: #707070;
+
+    /* Borders & Shadows - Dark Theme */
+    --border-color: rgba(255, 255, 255, 0.15);
+    --shadow-light: rgba(0, 0, 0, 0.4);
+    --shadow-medium: rgba(0, 0, 0, 0.6);
+
+    /* Navbar - Dark Theme */
+    --navbar-bg: rgba(18, 18, 18, 0.95);
+    --navbar-scrolled: rgba(18, 18, 18, 0.98);
+
+    /* Footer - Dark Theme */
+    --footer-bg: var(--primary-color);
+    --footer-text: #e0e0e0;
+
+    /* Hero Overlay - Dark Theme */
+    --hero-overlay: rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6);
+}
+
 body {
-    font-family: 'Open Sans', Arial, sans-serif; /* Changed font */
-    line-height: 1.7; /* Adjusted line height */
-    color: #333;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Navigation */
@@ -17,7 +88,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--navbar-bg);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
@@ -25,8 +96,8 @@ body {
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    background: var(--navbar-scrolled);
+    box-shadow: 0 4px 15px var(--shadow-light);
 }
 
 .nav-container {
@@ -39,10 +110,10 @@ body {
 }
 
 .logo {
-    font-family: 'Montserrat', sans-serif; /* Changed font */
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
     font-weight: bold;
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -56,16 +127,77 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-primary);
     font-weight: 500;
-    transition: color 0.3s ease, background 0.3s ease; /* Added background transition */
+    transition: color 0.3s ease, background 0.3s ease;
     padding: 0.5rem 1rem;
     border-radius: 5px;
 }
 
 .nav-links a:hover {
-    color: #667eea;
-    background: rgba(102, 126, 234, 0.1);
+    color: var(--primary-color);
+    background: rgba(106, 137, 204, 0.1); /* Using specific rgba for hover */
+}
+
+[data-theme="dark"] .nav-links a:hover {
+    background: rgba(106, 137, 204, 0.2); /* Using specific rgba for dark hover */
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    min-width: 60px;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(106, 137, 204, 0.4); /* Using specific rgba for shadow */
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+.sun-icon, .moon-icon {
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: absolute;
+}
+
+[data-theme="dark"] .sun-icon {
+    opacity: 0;
+    transform: rotate(180deg) scale(0);
+}
+
+[data-theme="dark"] .moon-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+[data-theme="light"] .sun-icon,
+:root:not([data-theme]) .sun-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+[data-theme="light"] .moon-icon,
+:root:not([data-theme]) .moon-icon {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0);
 }
 
 /* Mobile menu toggle button (hidden as per trips.html, but kept for potential future use) */
@@ -76,7 +208,7 @@ body {
 /* Hero Sections */
 .hero, .page-hero {
     height: 60vh;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.6), rgba(118, 75, 162, 0.6)),
+    background: linear-gradient(135deg, var(--hero-overlay)),
                 url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
     background-position: center;
@@ -93,12 +225,12 @@ body {
 }
 
 .hero-content h1 {
-    font-family: 'Montserrat', sans-serif; /* Changed font */
+    font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    letter-spacing: 0.5px; /* Added letter spacing */
+    letter-spacing: 0.5px;
 }
 
 .hero-content p {
@@ -113,7 +245,7 @@ body {
 }
 
 .welcome {
-    background: linear-gradient(135deg, #f0f2fb, #e9ecef); /* Lighter background */
+    background: var(--bg-secondary);
 }
 
 .container {
@@ -124,23 +256,23 @@ body {
 
 .section-title {
     text-align: center;
-    margin-bottom: 3.5rem; /* Adjusted margin */
+    margin-bottom: 3.5rem;
 }
 
 .section-title h2 {
-    font-family: 'Montserrat', sans-serif; /* Changed font */
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: 0.3px; /* Added letter spacing */
+    letter-spacing: 0.3px;
 }
 
 .section-title p {
     font-size: 1.1rem;
-    color: #555; /* Darker gray */
+    color: var(--text-secondary);
 }
 
 /* Welcome Content */
@@ -152,48 +284,77 @@ body {
 }
 
 .welcome-card {
-    background: #fefefe; /* Slightly off-white */
-    padding: 2.5rem; /* Increased padding */
+    background: var(--bg-card);
+    padding: 2.5rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    box-shadow: 0 10px 30px var(--shadow-light);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .welcome-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); /* Enhanced hover shadow */
+    box-shadow: 0 15px 40px var(--shadow-medium);
 }
 
 .welcome-card h3 {
-    font-family: 'Montserrat', sans-serif; /* Changed font */
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: var(--text-primary);
 }
 
 .welcome-card p {
-    color: #555; /* Darker gray */
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
     line-height: 1.7;
 }
 
+/* Button Styles */
 .btn {
     display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    padding: 0.8rem 1.8rem; /* Slightly more horizontal padding */
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: white;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 500;
     transition: all 0.3s ease;
-    position: relative; /* For ripple effect */
-    overflow: hidden; /* For ripple effect */
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Ensure text is above ripple */
+    box-shadow: 0 5px 15px rgba(106, 137, 204, 0.3); /* Initial subtle shadow */
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color)); /* Reverse gradient for hover */
+    z-index: -1;
+    transition: transform 0.3s ease;
+    transform: scaleX(0); /* Start hidden */
+    transform-origin: right;
+    border-radius: 25px;
+}
+
+.btn:hover::before {
+    transform: scaleX(1); /* Expand on hover */
+    transform-origin: left;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4); /* Enhanced hover shadow */
+    transform: translateY(-3px); /* Slightly more pronounced lift */
+    box-shadow: 0 10px 25px rgba(106, 137, 204, 0.5); /* Enhanced shadow on hover */
+    color: white; /* Ensure text remains white */
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(106, 137, 204, 0.3);
 }
 
 /* Family Grid with Navigation */
@@ -217,10 +378,10 @@ body {
 }
 
 .family-card {
-    background: #fefefe; /* Slightly off-white */
+    background: var(--bg-card);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    box-shadow: 0 10px 30px var(--shadow-light);
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
@@ -233,15 +394,15 @@ body {
 
 .family-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); /* Enhanced hover shadow */
+    box-shadow: 0 15px 40px var(--shadow-medium);
 }
 
-.family-card-wide { /* New rule for wider cards */
+.family-card-wide {
     grid-column: span 2;
 }
 
 .nav-btn {
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -253,12 +414,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 15px rgba(106, 137, 204, 0.3);
 }
 
 .nav-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 6px 20px rgba(106, 137, 204, 0.4);
 }
 
 .nav-btn:active {
@@ -269,7 +430,7 @@ body {
     opacity: 0.5;
     cursor: not-allowed;
     transform: none;
-    box-shadow: none; /* No shadow when disabled */
+    box-shadow: none;
 }
 
 .nav-btn span {
@@ -280,7 +441,7 @@ body {
 .page-indicator {
     display: flex;
     justify-content: center;
-    gap: 0.6rem; /* Slightly larger gap */
+    gap: 0.6rem;
     margin-top: 2rem;
 }
 
@@ -294,7 +455,7 @@ body {
 }
 
 .page-dot.active {
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     transform: scale(1.2);
 }
 
@@ -303,7 +464,7 @@ body {
 }
 
 .page-dot.active:hover {
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
 }
 
 .family-image {
@@ -311,8 +472,8 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
-    transition: transform 0.3s ease; /* For image hover */
+    border-bottom: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
 }
 
 .family-image:hover {
@@ -328,35 +489,35 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--text-primary);
 }
 
 .family-content .role {
     font-size: 0.95rem;
-    color: #667eea;
+    color: var(--primary-color); /* Role color uses primary color */
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
 .family-content p {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
 /* Trip Sections (for trips.html) */
 .trip-section {
-    background: #fefefe;
+    background: var(--bg-card);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px var(--shadow-light);
     padding: 2.5rem;
     margin-bottom: 3rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .trip-section:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 15px 40px var(--shadow-medium);
 }
 
 .trip-header {
@@ -368,7 +529,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     margin-bottom: 0.8rem;
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -377,13 +538,13 @@ body {
 
 .trip-description {
     font-size: 1.1rem;
-    color: #555;
+    color: var(--text-secondary);
     margin-bottom: 1rem;
 }
 
 .place-date {
     font-size: 0.9rem;
-    color: #888;
+    color: var(--text-muted);
     font-style: italic;
 }
 
@@ -394,22 +555,22 @@ body {
 }
 
 .trip-photo {
-    background-color: #f0f0f0; /* Fallback background */
+    background-color: var(--bg-secondary); /* Adjusted to theme var */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    display: flex; /* Added for vertical centering if needed */
-    flex-direction: column; /* Added for vertical centering if needed */
-    height: 270px; /* Set a fixed height for all trip photos */
+    display: flex;
+    flex-direction: column;
+    height: 270px;
 }
 
 .trip-photo img {
     width: 100%;
-    height: 100%; /* Make image take full height of parent */
-    object-fit: cover; /* Crop image to cover the area without distortion */
-    display: block; /* Remove extra space below image */
+    height: 100%;
+    object-fit: cover;
+    display: block;
     transition: transform 0.3s ease;
 }
 
@@ -435,13 +596,12 @@ body {
     opacity: 1;
 }
 
-
 /* Info Section */
 .info-content {
     display: flex;
     align-items: center;
     gap: 3rem;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
 }
 
 .info-text {
@@ -452,12 +612,12 @@ body {
 
 .info-text p {
     margin-bottom: 1rem;
-    color: #444;
+    color: var(--text-secondary);
 }
 
 .info-image {
     flex: 1;
-    min-width: 250px; /* Minimum width for image container */
+    min-width: 250px;
     text-align: center;
 }
 
@@ -470,12 +630,12 @@ body {
 
 /* Footer */
 .footer {
-    background: #333;
-    color: white;
+    background: var(--footer-bg);
+    color: var(--footer-text);
     text-align: center;
     padding: 1.5rem 0;
     font-size: 0.9rem;
-    margin-top: 3rem; /* Add some space from the last section */
+    margin-top: 3rem;
 }
 
 /* Ripple effect for buttons */
@@ -484,7 +644,7 @@ body {
     border-radius: 50%;
     transform: scale(0);
     animation: ripple 0.6s linear;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7); /* Adjusted for better visibility */
 }
 
 @keyframes ripple {
@@ -496,27 +656,37 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+        position: relative;
+    }
+    
+    .theme-toggle {
+        position: absolute;
+        top: 0;
+        right: 2rem;
+        margin: 0;
+        z-index: 10;
+    }
+
     .nav-links {
         flex-direction: column;
         width: 100%;
         position: absolute;
         top: 100%;
         left: 0;
-        background: rgba(255, 255, 255, 0.98);
+        background: var(--navbar-bg);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        display: none; /* Hidden by default on mobile */
+        display: none;
         padding: 1rem 0;
         border-top: 1px solid #eee;
+        margin-top: 1rem;
     }
 
     .nav-links.active {
-        display: flex; /* Show when active */
+        display: flex;
     }
-
-    /* mobile-menu-toggle should not be displayed, as per trips.html */
-    /* .mobile-menu-toggle {
-        display: block; 
-    } */
 
     .hero-content h1 {
         font-size: 2.2rem;
@@ -551,7 +721,7 @@ body {
     }
 
     .trip-gallery {
-        grid-template-columns: 1fr; /* Stack images on mobile */
+        grid-template-columns: 1fr;
     }
 
     .info-content {
@@ -563,8 +733,8 @@ body {
         margin-top: 2rem;
     }
 
-    .family-card-wide { /* Ensure wide cards still span full width on mobile if grid changes to 1fr */
-        grid-column: span 1 !important; /* Override to single column on small screens */
+    .family-card-wide {
+        grid-column: span 1 !important;
     }
 }
 
@@ -574,7 +744,7 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-    outline: 2px solid #667eea;
+    outline: 2px solid var(--primary-color); /* Focus outline uses primary color */
     outline-offset: 2px;
 }
 
@@ -604,13 +774,13 @@ textarea:focus {
     }
     
     .welcome-card, .family-card, .trip-section {
-        box-shadow: none !important; /* Remove shadows in print */
-        border: 1px solid #eee; /* Add subtle border for separation */
-        page-break-inside: avoid; /* Avoid breaking cards across pages */
+        box-shadow: none !important;
+        border: 1px solid #eee;
+        page-break-inside: avoid;
     }
     
     .trip-photo img {
-        border: none !important; /* Remove image border in print */
+        border: none !important;
     }
 }
 
@@ -630,7 +800,7 @@ textarea:focus {
     .btn {
         background: #000;
         color: #fff;
-        border: 2px solid #fff; /* Added border for contrast */
+        border: 2px solid #fff;
     }
     
     .nav-links a {
@@ -656,4 +826,65 @@ textarea:focus {
     .page-hero h1, .page-hero p {
         text-shadow: none;
     }
+    
+    /* Dark theme high contrast adjustments */
+    [data-theme="dark"] .navbar {
+        background: #000;
+        border-bottom: 2px solid #fff;
+    }
+    
+    [data-theme="dark"] .logo {
+        background: none;
+        -webkit-text-fill-color: #fff;
+        color: #fff;
+    }
+    
+    [data-theme="dark"] .nav-links a {
+        color: #fff;
+    }
+    
+    [data-theme="dark"] .nav-links a:hover {
+        background: #333;
+        color: #fff;
+    }
+    
+    [data-theme="dark"] .btn {
+        background: #fff;
+        color: #000;
+        border: 2px solid #000;
+    }
+    
+    [data-theme="dark"] .section-title h2, 
+    [data-theme="dark"] .trip-header h3 {
+        background: none;
+        -webkit-text-fill-color: #fff;
+        color: #fff;
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
