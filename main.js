@@ -1,3 +1,70 @@
+// Theme Management System
+class ThemeManager {
+    constructor() {
+        this.theme = localStorage.getItem('theme') || this.getSystemTheme();
+        this.init();
+    }
+
+    init() {
+        // Apply saved theme on page load
+        document.documentElement.setAttribute('data-theme', this.theme);
+        
+        // Set up toggle button
+        const toggleButton = document.getElementById('themeToggle');
+        if (toggleButton) {
+            toggleButton.addEventListener('click', () => this.toggleTheme());
+        }
+
+        // Listen for system theme changes
+        if (window.matchMedia) {
+            const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            mediaQuery.addEventListener('change', () => {
+                if (!localStorage.getItem('theme')) {
+                    this.theme = this.getSystemTheme();
+                    this.applyTheme();
+                }
+            });
+        }
+
+        // Set initial theme if no preference is saved
+        if (!localStorage.getItem('theme')) {
+            this.theme = this.getSystemTheme();
+            this.applyTheme();
+        }
+    }
+
+    getSystemTheme() {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark';
+        }
+        return 'light';
+    }
+
+    toggleTheme() {
+        this.theme = this.theme === 'light' ? 'dark' : 'light';
+        this.applyTheme();
+    }
+
+    applyTheme() {
+        document.documentElement.setAttribute('data-theme', this.theme);
+        localStorage.setItem('theme', this.theme);
+        
+        // Dispatch custom event for other components that might need to know about theme changes
+        window.dispatchEvent(new CustomEvent('themeChanged', { 
+            detail: { theme: this.theme } 
+        }));
+    }
+
+    getCurrentTheme() {
+        return this.theme;
+    }
+}
+
+// Initialize theme manager when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    window.themeManager = new ThemeManager();
+});
+
 // Navbar scroll effect
 window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
@@ -119,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Fade in animation for cards
-    const cards = document.querySelectorAll('.family-card, .place-card, .welcome-card, .trip-section'); // Added .trip-section for fade-in
+    const cards = document.querySelectorAll('.family-card, .place-card, .welcome-card, .trip-section');
     
     const observerOptions = {
         threshold: 0.1,
@@ -151,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Image lazy loading for better performance
 function lazyLoadImages() {
     // Select all images that need lazy loading. This might include background images set via style.
-    const images = document.querySelectorAll('.family-image, .place-image, .trip-photo img'); // Added .trip-photo img
+    const images = document.querySelectorAll('.family-image, .place-image, .trip-photo img');
 
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -218,7 +285,7 @@ document.querySelectorAll('.btn').forEach(button => {
 });
 
 // Error handling for images
-document.querySelectorAll('.family-image, .place-image, .trip-photo img').forEach(img => { // Added .trip-photo img
+document.querySelectorAll('.family-image, .place-image, .trip-photo img').forEach(img => {
     img.addEventListener('error', function() {
         this.classList.add('error'); // Add error class for CSS styling
         this.src = ''; // Clear src to prevent broken image icon, if it's an <img> tag
@@ -239,8 +306,24 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
     }
+    
+    // Toggle theme with Ctrl/Cmd + Shift + D
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'D') {
+        e.preventDefault();
+        if (window.themeManager) {
+            window.themeManager.toggleTheme();
+        }
+    }
 });
 
 document.addEventListener('mousedown', function() {
     document.body.classList.remove('keyboard-navigation');
+});
+
+// Theme change animation
+window.addEventListener('themeChanged', function(e) {
+    document.body.style.transition = 'all 0.3s ease';
+    setTimeout(() => {
+        document.body.style.transition = '';
+    }, 300);
 });
