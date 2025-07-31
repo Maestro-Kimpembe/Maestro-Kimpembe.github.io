@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrażenia - Erasmus+ 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+             <div class="logo">
+                <img src="logo.png" alt="Sklep u Grabusia Logo" class="logo-image">
+                <span class="logo-text">Erasmus+</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="wrazenia.html">Wrażenia na żywo</a></li>
+                <li><a href="rodzinka.html">Członkowie rodziny</a></li>
+                <li><a href="trips.html">Miejsca wycieczek</a></li>
+                <li><a href="index.html">Strona główna</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Nasze Wrażenia</h1>
+            <p>Filmowe wspomnienia z niezapomnianych chwil</p>
+        </div>
+    </section>
+
+    <section class="section" id="video-memories">
+        <div class="container">
+            <!-- Lisboa Video Memories -->
+            <div class="trip-section">
+                <div class="trip-header">
+                    <h3>Najlepsze chwile ze stażów</h3>
+                    <p class="trip-description">Najpiękniejsze momenty z naszej wizyty w stolicy Portugalii uchwycone w ruchu.</p>
+                    <div class="place-date">12.07.2025</div>
+                </div>
+                <div class="trip-gallery">
+                    <div class="trip-video">
+                        <video controls preload="metadata" loading="lazy">
+                            <source src="videos/car1.mp4" type="video/mp4">
+                            Twoja przeglądarka nie obsługuje odtwarzania wideo.
+                        </video>
+                        <div class="video-caption">Spacer po Alfamie</div>
+                    </div>
+                    <div class="trip-video">
+                        <video controls preload="metadata" loading="lazy">
+                            <source src="videos/car2.mp4" type="video/mp4">
+                            Twoja przeglądarka nie obsługuje odtwarzania wideo.
+                        </video>
+                        <div class="video-caption">Tramwaj 28 w akcji</div>
+                    </div>
+                    <div class="trip-video">
+                        <video controls preload="metadata" loading="lazy">
+                            <source src="videos/car3.mp4" type="video/mp4">
+                            Twoja przeglądarka nie obsługuje odtwarzania wideo.
+                        </video>
+                        <div class="video-caption">Wieża Belém o zachodzie</div>
+                    </div>
+                    <div class="trip-video">
+                        <video controls preload="metadata" loading="lazy">
+                            <source src="videos/viktor.mp4" type="video/mp4">
+                            Twoja przeglądarka nie obsługuje odtwarzania wideo.
+                        </video>
+                        <div class="video-caption">Fado na żywo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Figueira da Foz - Erasmus+ 2025</p>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
