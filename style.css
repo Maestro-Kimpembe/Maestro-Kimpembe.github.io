@@ -54,7 +54,7 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-primary);
     overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Navigation */
@@ -66,7 +66,7 @@ body {
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
 .navbar.scrolled {
@@ -101,7 +101,7 @@ body {
     width: 40px;
     border-radius: 8px;
     object-fit: contain;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .logo-image:hover {
@@ -128,7 +128,7 @@ body {
     text-decoration: none;
     color: var(--text-primary);
     font-weight: 500;
-    transition: color 0.3s ease, background 0.3s ease;
+    transition: color 0.3s, background 0.3s;
     padding: 0.5rem 1rem;
     border-radius: 5px;
 }
@@ -150,7 +150,7 @@ body {
     color: white;
     cursor: pointer;
     font-size: 1.2rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -172,7 +172,7 @@ body {
 }
 
 .sun-icon, .moon-icon {
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     display: inline-block;
     position: absolute;
 }
@@ -287,7 +287,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 30px var(--shadow-light);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .welcome-card:hover {
@@ -317,7 +317,7 @@ body {
     text-decoration: none;
     border-radius: 25px;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -333,7 +333,7 @@ body {
     bottom: 0;
     background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
     z-index: -1;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
     transform: scaleX(0);
     transform-origin: right;
     border-radius: 25px;
@@ -372,7 +372,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s;
 }
 
 .family-card {
@@ -380,7 +380,7 @@ body {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px var(--shadow-light);
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     opacity: 0;
     transform: translateY(20px);
 }
@@ -408,7 +408,7 @@ body {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -449,7 +449,7 @@ body {
     border-radius: 50%;
     background: #ddd;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
 .page-dot.active {
@@ -471,7 +471,7 @@ body {
     background-position: center;
     position: relative;
     border-bottom: 1px solid var(--border-color);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .family-image:hover {
@@ -510,7 +510,7 @@ body {
     box-shadow: 0 10px 30px var(--shadow-light);
     padding: 2.5rem;
     margin-bottom: 3rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .trip-section:hover {
@@ -553,6 +553,8 @@ body {
     gap: 2rem;
     margin-top: 2rem;
     padding-bottom: 2rem;
+    align-items: stretch;
+    justify-content: center; /* Center last row if not full */
 }
 
 .trip-video {
@@ -562,7 +564,9 @@ body {
     padding: 1.2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 320px;
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
 }
@@ -573,14 +577,13 @@ body {
 }
 
 .trip-video video {
+    flex: 1 1 auto;
     width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.10);
     background: #222;
     object-fit: cover;
-    transition: box-shadow 0.3s;
-    outline: none;
     margin-bottom: 0.5rem;
     cursor: pointer;
     display: block;
@@ -611,6 +614,7 @@ body {
     .trip-video {
         padding: 0.5rem;
         border-radius: 12px;
+        min-height: 0;
     }
     .trip-video video {
         border-radius: 8px;
@@ -626,7 +630,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -638,7 +642,7 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .trip-photo:hover img {
@@ -656,7 +660,7 @@ body {
     left: 0;
     width: 100%;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s;
 }
 
 .trip-photo:hover .photo-caption {
@@ -924,6 +928,8 @@ textarea:focus {
         color: #fff;
     }
 }
+
+/* --- Video Modal Styles --- */
 .video-modal {
     position: fixed;
     top: 0; left: 0;
