@@ -328,4 +328,324 @@ window.addEventListener('themeChanged', function(e) {
     }, 300);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
 
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.setAttribute('data-theme', savedTheme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+        if (body.getAttribute('data-theme') === 'dark') {
+            body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+
+    // Navbar Scroll Functionality
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
+
+    // Image Modal/Lightbox Functionality
+    // This check prevents errors on pages without the modal HTML
+    const modal = document.getElementById('imageModal');
+
+    if (modal) {
+        const modalImage = document.getElementById('modalImage');
+        const modalVideo = document.getElementById('modalVideo');
+        const modalCaption = document.getElementById('caption');
+        const closeBtn = document.querySelector('.close-btn');
+
+        // Get all the images and videos that should trigger the modal
+        const mediaItems = document.querySelectorAll('.family-image, .trip-photo img, .trip-video video');
+
+        mediaItems.forEach(item => {
+            item.style.cursor = 'pointer';
+
+            item.addEventListener('click', function() {
+                let src;
+                let altText = '';
+                
+                // Check if the clicked item is a video
+                if (this.tagName === 'VIDEO') {
+                    // Find the source from the child <source> tag
+                    const sourceElement = this.querySelector('source');
+                    if (sourceElement) {
+                        src = sourceElement.src;
+                        altText = this.getAttribute('alt') || '';
+                    }
+
+                    if (src) {
+                        modalVideo.src = src;
+                        modalVideo.style.display = 'block';
+                        modalImage.style.display = 'none';
+                        modalVideo.play();
+                    }
+                } else { // Handle images
+                    src = this.tagName === 'IMG' ? this.src : this.getAttribute('data-bg');
+                    altText = this.alt || (this.closest('.family-card')?.querySelector('h3')?.textContent) || '';
+
+                    modalImage.src = src;
+                    modalImage.style.display = 'block';
+                    modalVideo.style.display = 'none';
+                    modalVideo.pause();
+                    modalVideo.currentTime = 0;
+                }
+                
+                modalCaption.textContent = altText;
+                modal.classList.add('visible');
+            });
+        });
+
+        // Close the modal when the close button is clicked
+        closeBtn.addEventListener('click', function() {
+            modal.classList.remove('visible');
+            modalVideo.pause();
+            modalVideo.currentTime = 0;
+        });
+
+        // Close the modal if the user clicks anywhere outside the modal content
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.classList.remove('visible');
+                modalVideo.pause();
+                modalVideo.currentTime = 0;
+            }
+        });
+    }
+});
+// NEW POP-UP GALLERY FUNCTIONALITY
+document.addEventListener('DOMContentLoaded', () => {
+    const galleryPhotos = document.querySelectorAll('.trip-photo img');
+    if (galleryPhotos.length > 0) {
+        let currentImageIndex = 0;
+        let imagesArray = Array.from(galleryPhotos);
+
+        // Function to create the lightbox HTML elements
+        const createLightbox = () => {
+            const lightboxOverlay = document.createElement('div');
+            lightboxOverlay.id = 'lightbox-overlay';
+            lightboxOverlay.className = 'lightbox-overlay';
+
+            const lightboxContainer = document.createElement('div');
+            lightboxContainer.className = 'lightbox-container';
+
+            const lightboxImg = document.createElement('img');
+            lightboxImg.id = 'lightbox-img';
+            lightboxImg.className = 'lightbox-img';
+
+            const lightboxCaption = document.createElement('span');
+            lightboxCaption.className = 'lightbox-caption';
+            lightboxCaption.id = 'lightbox-caption';
+
+            const closeBtn = document.createElement('button');
+            closeBtn.id = 'lightbox-close-btn';
+            closeBtn.className = 'lightbox-close-btn';
+            closeBtn.innerHTML = '&times;';
+
+            const prevBtn = document.createElement('button');
+            prevBtn.className = 'lightbox-nav-btn prev';
+            prevBtn.innerHTML = '&#10094;';
+
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'lightbox-nav-btn next';
+            nextBtn.innerHTML = '&#10095;';
+
+            lightboxContainer.appendChild(lightboxImg);
+            lightboxContainer.appendChild(lightboxCaption);
+            lightboxOverlay.appendChild(lightboxContainer);
+            lightboxOverlay.appendChild(closeBtn);
+            lightboxOverlay.appendChild(prevBtn);
+            lightboxOverlay.appendChild(nextBtn);
+
+            document.body.appendChild(lightboxOverlay);
+
+            return { lightboxOverlay, lightboxImg, lightboxCaption, closeBtn, prevBtn, nextBtn };
+        };
+
+        const { lightboxOverlay, lightboxImg, lightboxCaption, closeBtn, prevBtn, nextBtn } = createLightbox();
+
+        // Function to open the lightbox with the correct image source
+        const openLightbox = (imgSrc, imgAlt, startIndex) => {
+            currentImageIndex = startIndex;
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = imgAlt;
+            lightboxOverlay.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            updateNavButtons();
+        };
+
+        // Function to close the lightbox
+        const closeLightbox = () => {
+            lightboxOverlay.classList.remove('show');
+            document.body.style.overflow = '';
+        };
+
+        // Function to change the image in the lightbox
+        const changeImage = (direction) => {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) {
+                currentImageIndex = imagesArray.length - 1;
+            } else if (currentImageIndex >= imagesArray.length) {
+                currentImageIndex = 0;
+            }
+            const newImage = imagesArray[currentImageIndex];
+            // Use src if loaded, fallback to data-src if present
+            lightboxImg.src = newImage.src || newImage.dataset.src || '';
+            lightboxCaption.textContent = newImage.alt;
+            updateNavButtons();
+        };
+
+        const updateNavButtons = () => {
+            prevBtn.style.display = imagesArray.length > 1 ? 'flex' : 'none';
+            nextBtn.style.display = imagesArray.length > 1 ? 'flex' : 'none';
+        };
+
+        // Event listeners for opening the lightbox
+        imagesArray.forEach((img, index) => {
+            img.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const imgSrc = img.src || img.dataset.src || '';
+                const imgAlt = img.alt;
+                openLightbox(imgSrc, imgAlt, index);
+            });
+        });
+
+        // Event listeners for closing and navigation
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeLightbox();
+        });
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            changeImage(-1);
+        });
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            changeImage(1);
+        });
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            if (!lightboxOverlay.classList.contains('show')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') changeImage(-1);
+            if (e.key === 'ArrowRight') changeImage(1);
+        });
+
+        // Close lightbox when clicking outside the container
+        lightboxOverlay.addEventListener('click', (e) => {
+            if (e.target === lightboxOverlay) closeLightbox();
+        });
+    }
+});
+// Error handling for images
+document.querySelectorAll('.family-image, .place-image, .trip-photo img').forEach(img => {
+    // Store original alt text
+    const originalAlt = img.alt;
+
+    img.addEventListener('error', function() {
+        this.classList.add('error'); // Add error class for CSS styling
+        this.src = ''; // Clear src to prevent broken image icon, if it's an <img> tag
+        this.style.backgroundImage = 'none'; // Clear background image, if it's for background-image
+
+        // Check if it's a background-image element or an actual <img> tag
+        if (this.classList.contains('family-image') || this.classList.contains('place-image')) {
+            this.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #999; font-size: 0.9em; text-align: center;">Zdjęcie niedostępne</div>';
+        } else if (this.tagName === 'IMG') {
+            this.alt = 'Zdjęcie niedostępne'; // Update alt text
+        }
+    });
+
+    // Restore original alt text on successful load
+    img.addEventListener('load', function() {
+        if (this.tagName === 'IMG') {
+            this.alt = originalAlt;
+        }
+        this.classList.remove('error');
+    });
+});
+// --- POP-UP VIDEO MODAL FUNCTIONALITY ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Create modal HTML if not present
+    if (!document.getElementById('videoModal')) {
+        const modal = document.createElement('div');
+        modal.id = 'videoModal';
+        modal.className = 'video-modal';
+
+        const closeBtn = document.createElement('span');
+        closeBtn.className = 'video-modal-close';
+        closeBtn.innerHTML = '&times;';
+
+        const videoPlayer = document.createElement('video');
+        videoPlayer.id = 'videoModalPlayer';
+        videoPlayer.controls = true;
+
+        modal.appendChild(closeBtn);
+        modal.appendChild(videoPlayer);
+        document.body.appendChild(modal);
+    }
+
+    const modal = document.getElementById('videoModal');
+    const modalPlayer = document.getElementById('videoModalPlayer');
+    const closeBtn = modal.querySelector('.video-modal-close');
+
+    // Open modal when any .trip-video video is clicked
+    document.querySelectorAll('.trip-video video').forEach(video => {
+        video.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            // Use currentSrc if available, fallback to <source> or .src
+            let src = video.currentSrc || (video.querySelector('source')?.src) || video.src;
+            modalPlayer.src = src;
+            modalPlayer.poster = video.poster || '';
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            modalPlayer.currentTime = 0;
+            modalPlayer.play();
+        });
+    });
+
+    // Close modal on close button
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('show');
+        modalPlayer.pause();
+        modalPlayer.src = '';
+        document.body.style.overflow = '';
+    });
+
+    // Close modal when clicking outside video
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+            modalPlayer.pause();
+            modalPlayer.src = '';
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (modal.classList.contains('show') && e.key === 'Escape') {
+            modal.classList.remove('show');
+            modalPlayer.pause();
+            modalPlayer.src = '';
+            document.body.style.overflow = '';
+        }
+    });
+});
