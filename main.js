@@ -580,3 +580,72 @@ document.querySelectorAll('.family-image, .place-image, .trip-photo img').forEac
         this.classList.remove('error');
     });
 });
+// --- POP-UP VIDEO MODAL FUNCTIONALITY ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Create modal HTML if not present
+    if (!document.getElementById('videoModal')) {
+        const modal = document.createElement('div');
+        modal.id = 'videoModal';
+        modal.className = 'video-modal';
+
+        const closeBtn = document.createElement('span');
+        closeBtn.className = 'video-modal-close';
+        closeBtn.innerHTML = '&times;';
+
+        const videoPlayer = document.createElement('video');
+        videoPlayer.id = 'videoModalPlayer';
+        videoPlayer.controls = true;
+
+        modal.appendChild(closeBtn);
+        modal.appendChild(videoPlayer);
+        document.body.appendChild(modal);
+    }
+
+    const modal = document.getElementById('videoModal');
+    const modalPlayer = document.getElementById('videoModalPlayer');
+    const closeBtn = modal.querySelector('.video-modal-close');
+
+    // Open modal when any .trip-video video is clicked
+    document.querySelectorAll('.trip-video video').forEach(video => {
+        video.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            // Use currentSrc if available, fallback to <source> or .src
+            let src = video.currentSrc || (video.querySelector('source')?.src) || video.src;
+            modalPlayer.src = src;
+            modalPlayer.poster = video.poster || '';
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            modalPlayer.currentTime = 0;
+            modalPlayer.play();
+        });
+    });
+
+    // Close modal on close button
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('show');
+        modalPlayer.pause();
+        modalPlayer.src = '';
+        document.body.style.overflow = '';
+    });
+
+    // Close modal when clicking outside video
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+            modalPlayer.pause();
+            modalPlayer.src = '';
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (modal.classList.contains('show') && e.key === 'Escape') {
+            modal.classList.remove('show');
+            modalPlayer.pause();
+            modalPlayer.src = '';
+            document.body.style.overflow = '';
+        }
+    });
+});
